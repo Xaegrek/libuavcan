@@ -29,14 +29,6 @@
 #  define TIMX_IRQHandler         UAVCAN_STM32_GLUE3(TIM, UAVCAN_STM32_TIMER_NUMBER, _IRQHandler)
 # endif
 
-# if UAVCAN_STM32_NUTTX
-#  define TIMX                    UAVCAN_STM32_GLUE3(STM32_TIM, UAVCAN_STM32_TIMER_NUMBER, _BASE)
-#  define  TMR_REG(o)              (TIMX + (o))
-#  define TIMX_INPUT_CLOCK         UAVCAN_STM32_GLUE3(STM32_APB1_TIM, UAVCAN_STM32_TIMER_NUMBER, _CLKIN)
-
-#  define TIMX_IRQn                UAVCAN_STM32_GLUE2(STM32_IRQ_TIM, UAVCAN_STM32_TIMER_NUMBER)
-# endif
-
 # if UAVCAN_STM32_TIMER_NUMBER >= 2 && UAVCAN_STM32_TIMER_NUMBER <= 7
 #  define TIMX_RCC_ENR           RCC->APB1ENR
 #  define TIMX_RCC_RSTR          RCC->APB1RSTR
@@ -81,26 +73,6 @@ uavcan::uint64_t time_utc = 0;
 
 }
 
-#if UAVCAN_STM32_BAREMETAL || UAVCAN_STM32_FREERTOS
-
-static void nvicEnableVector(IRQn_Type irq,  uint8_t prio)
-{
-    #if !defined (USE_HAL_DRIVER)
-      NVIC_InitTypeDef NVIC_InitStructure;
-      NVIC_InitStructure.NVIC_IRQChannel = irq;
-      NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = prio;
-      NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-      NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-      NVIC_Init(&NVIC_InitStructure);
-    #else
-      HAL_NVIC_SetPriority(irq, prio, 0);
-      HAL_NVIC_EnableIRQ(irq);
-    #endif
-
-}
-
-#endif
-
 void init()
 {
     CriticalSectionLocker lock;
@@ -132,34 +104,6 @@ void init()
     TIMX->EGR  = TIM_EGR_UG;     // Reload immediately
     TIMX->DIER = TIM_DIER_UIE;
     TIMX->CR1  = TIM_CR1_CEN;    // Start
-
-# endif
-
-# if UAVCAN_STM32_NUTTX
-
-    // Attach IRQ
-    irq_attach(TIMX_IRQn, &TIMX_IRQHandler);
-
-    // Power-on and reset
-    modifyreg32(STM32_RCC_APB1ENR, 0, TIMX_RCC_ENR_MASK);
-    modifyreg32(STM32_RCC_APB1RSTR, 0, TIMX_RCC_RSTR_MASK);
-    modifyreg32(STM32_RCC_APB1RSTR, TIMX_RCC_RSTR_MASK, 0);
-
-
-    // Start the timer
-    putreg32(0xFFFF, TMR_REG(STM32_BTIM_ARR_OFFSET));
-    putreg16(((TIMX_INPUT_CLOCK / 1000000)-1), TMR_REG(STM32_BTIM_PSC_OFFSET));
-    putreg16(BTIM_CR1_URS, TMR_REG(STM32_BTIM_CR1_OFFSET));
-    putreg16(0, TMR_REG(STM32_BTIM_SR_OFFSET));
-    putreg16(BTIM_EGR_UG, TMR_REG(STM32_BTIM_EGR_OFFSET)); // Reload immediately
-    putreg16(BTIM_DIER_UIE, TMR_REG(STM32_BTIM_DIER_OFFSET));
-    putreg16(BTIM_CR1_CEN, TMR_REG(STM32_BTIM_CR1_OFFSET)); // Start
-
-    // Prioritize and Enable  IRQ
-// todo: Currently changing the NVIC_SYSH_HIGH_PRIORITY is HARD faulting
-// need to investigate
-//    up_prioritize_irq(TIMX_IRQn, NVIC_SYSH_HIGH_PRIORITY);
-    up_enable_irq(TIMX_IRQn);
 
 # endif
 }
@@ -199,24 +143,6 @@ static uavcan::uint64_t sampleUtcFromCriticalSection()
     }
     return time + cnt;
 # endif
-
-# if UAVCAN_STM32_NUTTX
-
-    UAVCAN_ASSERT(initialized);
-    UAVCAN_ASSERT(getreg16(TMR_REG(STM32_BTIM_DIER_OFFSET)) & BTIM_DIER_UIE);
-
-    volatile uavcan::uint64_t time = time_utc;
-    volatile uavcan::uint32_t cnt = getreg16(TMR_REG(STM32_BTIM_CNT_OFFSET));
-
-    if (getreg16(TMR_REG(STM32_BTIM_SR_OFFSET)) & BTIM_SR_UIF)
-    {
-        cnt = getreg16(TMR_REG(STM32_BTIM_CNT_OFFSET));
-        const uavcan::int32_t add = uavcan::int32_t(USecPerOverflow) +
-                                    (utc_accumulated_correction_nsec + utc_correction_nsec_per_overflow) / 1000;
-        time = uavcan::uint64_t(uavcan::int64_t(time) + add);
-    }
-    return time + cnt;
-# endif
 }
 
 uavcan::uint64_t getUtcUSecFromCanInterrupt()
@@ -241,14 +167,6 @@ uavcan::MonotonicTime getMonotonic()
             cnt = TIMX->CNT;
 # endif
 
-# if UAVCAN_STM32_NUTTX
-
-        volatile uavcan::uint32_t cnt = getreg16(TMR_REG(STM32_BTIM_CNT_OFFSET));
-
-        if (getreg16(TMR_REG(STM32_BTIM_SR_OFFSET)) & BTIM_SR_UIF)
-        {
-            cnt = getreg16(TMR_REG(STM32_BTIM_CNT_OFFSET));
-# endif
             time += USecPerOverflow;
         }
         usec = time + cnt;
@@ -442,9 +360,6 @@ UAVCAN_STM32_IRQ_HANDLER(TIMX_IRQHandler)
 
 # if UAVCAN_STM32_CHIBIOS || UAVCAN_STM32_BAREMETAL || UAVCAN_STM32_FREERTOS
     TIMX->SR = 0;
-# endif
-# if UAVCAN_STM32_NUTTX
-    putreg16(0, TMR_REG(STM32_BTIM_SR_OFFSET));
 # endif
 
     using namespace uavcan_stm32::clock;

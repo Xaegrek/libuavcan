@@ -235,9 +235,6 @@ class CanDriver : public uavcan::ICanDriver, uavcan::Noncopyable
 {
     BusEvent update_event_;
     CanIface if0_;
-#if UAVCAN_STM32_NUM_IFACES > 1
-    CanIface if1_;
-#endif
 
     virtual uavcan::int16_t select(uavcan::CanSelectMasks& inout_masks,
                                    const uavcan::CanFrame* (& pending_tx)[uavcan::MaxCanIfaces],
@@ -250,9 +247,6 @@ public:
     CanDriver(CanRxItem (&rx_queue_storage)[UAVCAN_STM32_NUM_IFACES][RxQueueCapacity])
         : update_event_(*this)
         , if0_(bxcan::Can[0], update_event_, 0, rx_queue_storage[0], RxQueueCapacity)
-#if UAVCAN_STM32_NUM_IFACES > 1
-        , if1_(bxcan::Can[1], update_event_, 1, rx_queue_storage[1], RxQueueCapacity)
-#endif
     {
         uavcan::StaticAssert<(RxQueueCapacity <= CanIface::MaxRxQueueCapacity)>::check();
     }

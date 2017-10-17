@@ -10,13 +10,6 @@
 
 #if UAVCAN_STM32_CHIBIOS
 # include <hal.h>
-#elif UAVCAN_STM32_NUTTX
-# include <nuttx/arch.h>
-# include <nuttx/irq.h>
-# include <arch/board/board.h>
-#elif UAVCAN_STM32_BAREMETAL
-#include <chip.h>	// See http://uavcan.org/Implementations/Libuavcan/Platforms/STM32/
-#elif UAVCAN_STM32_FREERTOS
 #else
 # error "Unknown OS"
 #endif
@@ -43,20 +36,6 @@
 #define CAN2_RX1_IRQHandler     STM32_CAN2_RX1_HANDLER
 #endif
 
-#if UAVCAN_STM32_NUTTX
-# if !defined(STM32_IRQ_CAN1TX) && !defined(STM32_IRQ_CAN1RX0)
-#  define STM32_IRQ_CAN1TX      STM32_IRQ_USBHPCANTX
-#  define STM32_IRQ_CAN1RX0     STM32_IRQ_USBLPCANRX0
-# endif
-extern "C"
-{
-static int can1_irq(const int irq, void*);
-#if UAVCAN_STM32_NUM_IFACES > 1
-static int can2_irq(const int irq, void*);
-#endif
-}
-#endif
-
 /* STM32F3's only CAN inteface does not have a number. */
 #if defined(STM32F3XX)
 #define RCC_APB1ENR_CAN1EN     RCC_APB1ENR_CANEN
@@ -64,11 +43,6 @@ static int can2_irq(const int irq, void*);
 #define CAN1_TX_IRQn           CAN_TX_IRQn
 #define CAN1_RX0_IRQn          CAN_RX0_IRQn
 #define CAN1_RX1_IRQn          CAN_RX1_IRQn
-# if UAVCAN_STM32_BAREMETAL
-#  define CAN1_TX_IRQHandler   CAN_TX_IRQHandler
-#  define CAN1_RX0_IRQHandler  CAN_RX0_IRQHandler
-#  define CAN1_RX1_IRQHandler  CAN_RX1_IRQHandler
-# endif
 #endif
 
 
@@ -80,9 +54,6 @@ namespace
 CanIface* ifaces[UAVCAN_STM32_NUM_IFACES] =
 {
     UAVCAN_NULLPTR
-#if UAVCAN_STM32_NUM_IFACES > 1
-    , UAVCAN_NULLPTR
-#endif
 };
 
 inline void handleTxInterrupt(uavcan::uint8_t iface_index)
@@ -202,17 +173,7 @@ int CanIface::computeTimings(const uavcan::uint32_t target_bitrate, Timings& out
     /*
      * Hardware configuration
      */
-#if UAVCAN_STM32_BAREMETAL
     const uavcan::uint32_t pclk = STM32_PCLK1;
-#elif UAVCAN_STM32_CHIBIOS
-    const uavcan::uint32_t pclk = STM32_PCLK1;
-#elif UAVCAN_STM32_NUTTX
-    const uavcan::uint32_t pclk = STM32_PCLK1_FREQUENCY;
-#elif UAVCAN_STM32_FREERTOS
-    const uavcan::uint32_t pclk = HAL_RCC_GetPCLK1Freq();
-#else
-# error "Unknown OS"
-#endif
 
     static const int MaxBS1 = 16;
     static const int MaxBS2 = 8;
@@ -546,14 +507,8 @@ bool CanIface::waitMsrINakBitStateChange(bool target_state)
         {
             return true;
         }
-#if UAVCAN_STM32_NUTTX
-        ::usleep(1000);
-#endif
 #if UAVCAN_STM32_CHIBIOS
         ::chThdSleep(MS2ST(1));
-#endif
-#if UAVCAN_STM32_FREERTOS
-        ::osDelay(1);
 #endif
     }
     return false;
@@ -640,19 +595,10 @@ int CanIface::init(const uavcan::uint32_t bitrate, const OperatingMode mode)
         can_->FFA1R = 0;                           // All assigned to FIFO0 by default
         can_->FM1R = 0;                            // Indentifier Mask mode
 
-#if UAVCAN_STM32_NUM_IFACES > 1
-        can_->FS1R = 0x7ffffff;                    // Single 32-bit for all
-        can_->FilterRegister[0].FR1 = 0;          // CAN1 accepts everything
-        can_->FilterRegister[0].FR2 = 0;
-        can_->FilterRegister[NumFilters].FR1 = 0; // CAN2 accepts everything
-        can_->FilterRegister[NumFilters].FR2 = 0;
-        can_->FA1R = 1 | (1 << NumFilters);        // One filter per each iface
-#else
         can_->FS1R = 0x1fff;
         can_->FilterRegister[0].FR1 = 0;
         can_->FilterRegister[0].FR2 = 0;
         can_->FA1R = 1;
-#endif
 
         can_->FMR &= ~bxcan::FMR_FINIT;
     }
@@ -700,10 +646,6 @@ void CanIface::handleTxInterrupt(const uavcan::uint64_t utc_usec)
     update_event_.signalFromInterrupt();
 
     pollErrorFlagsFromISR();
-
-    #if UAVCAN_STM32_FREERTOS
-    update_event_.yieldFromISR();
-    #endif
 }
 
 void CanIface::handleRxInterrupt(uavcan::uint8_t fifo_index, uavcan::uint64_t utc_usec)
@@ -767,10 +709,6 @@ void CanIface::handleRxInterrupt(uavcan::uint8_t fifo_index, uavcan::uint64_t ut
     update_event_.signalFromInterrupt();
 
     pollErrorFlagsFromISR();
-
-    #if UAVCAN_STM32_FREERTOS
-    update_event_.yieldFromISR();
-    #endif
 }
 
 void CanIface::pollErrorFlagsFromISR()
@@ -889,33 +827,12 @@ uavcan::CanSelectMasks CanDriver::makeSelectMasks(const uavcan::CanFrame* (& pen
         msk.write = if0_.canAcceptNewTxFrame(*pending_tx[0]) ? 1 : 0;
     }
 
-    // Iface 1
-#if UAVCAN_STM32_NUM_IFACES > 1
-    if (!if1_.isRxBufferEmpty())
-    {
-        msk.read |= 1 << 1;
-    }
-
-    if (pending_tx[1] != UAVCAN_NULLPTR)
-    {
-        if (if1_.canAcceptNewTxFrame(*pending_tx[1]))
-        {
-            msk.write |= 1 << 1;
-        }
-    }
-#endif
     return msk;
 }
 
 bool CanDriver::hasReadableInterfaces() const
 {
-#if UAVCAN_STM32_NUM_IFACES == 1
 	return !if0_.isRxBufferEmpty();
-#elif UAVCAN_STM32_NUM_IFACES == 2
-	return !if0_.isRxBufferEmpty() || !if1_.isRxBufferEmpty();
-#else
-# error UAVCAN_STM32_NUM_IFACES
-#endif
 }
 
 uavcan::int16_t CanDriver::select(uavcan::CanSelectMasks& inout_masks,
@@ -931,14 +848,6 @@ uavcan::int16_t CanDriver::select(uavcan::CanSelectMasks& inout_masks,
         if0_.pollErrorFlagsFromISR();
     }
 
-#if UAVCAN_STM32_NUM_IFACES > 1
-    if1_.discardTimedOutTxMailboxes(time);
-    {
-        CriticalSectionLocker cs_locker;
-        if1_.pollErrorFlagsFromISR();
-    }
-#endif
-
     inout_masks = makeSelectMasks(pending_tx);          // Check if we already have some of the requested events
     if ((inout_masks.read  & in_masks.read)  != 0 ||
         (inout_masks.write & in_masks.write) != 0)
@@ -951,26 +860,6 @@ uavcan::int16_t CanDriver::select(uavcan::CanSelectMasks& inout_masks,
     return 1;                                   // Return value doesn't matter as long as it is non-negative
 }
 
-
-#if UAVCAN_STM32_BAREMETAL || UAVCAN_STM32_FREERTOS
-
-static void nvicEnableVector(IRQn_Type irq,  uint8_t prio)
-{
-    #if !defined (USE_HAL_DRIVER)
-      NVIC_InitTypeDef NVIC_InitStructure;
-      NVIC_InitStructure.NVIC_IRQChannel = irq;
-      NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = prio;
-      NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-      NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-      NVIC_Init(&NVIC_InitStructure);
-    #else
-      HAL_NVIC_SetPriority(irq, prio, 0);
-      HAL_NVIC_EnableIRQ(irq);
-    #endif
-}
-
-#endif
-
 void CanDriver::initOnce()
 {
     /*
@@ -978,58 +867,20 @@ void CanDriver::initOnce()
      */
     {
         CriticalSectionLocker lock;
-#if UAVCAN_STM32_NUTTX
-        modifyreg32(STM32_RCC_APB1ENR,  0, RCC_APB1ENR_CAN1EN);
-        modifyreg32(STM32_RCC_APB1RSTR, 0, RCC_APB1RSTR_CAN1RST);
-        modifyreg32(STM32_RCC_APB1RSTR, RCC_APB1RSTR_CAN1RST, 0);
-# if UAVCAN_STM32_NUM_IFACES > 1
-        modifyreg32(STM32_RCC_APB1ENR,  0, RCC_APB1ENR_CAN2EN);
-        modifyreg32(STM32_RCC_APB1RSTR, 0, RCC_APB1RSTR_CAN2RST);
-        modifyreg32(STM32_RCC_APB1RSTR, RCC_APB1RSTR_CAN2RST, 0);
-# endif
-#else
         RCC->APB1ENR  |=  RCC_APB1ENR_CAN1EN;
         RCC->APB1RSTR |=  RCC_APB1RSTR_CAN1RST;
         RCC->APB1RSTR &= ~RCC_APB1RSTR_CAN1RST;
-# if UAVCAN_STM32_NUM_IFACES > 1
-        RCC->APB1ENR  |=  RCC_APB1ENR_CAN2EN;
-        RCC->APB1RSTR |=  RCC_APB1RSTR_CAN2RST;
-        RCC->APB1RSTR &= ~RCC_APB1RSTR_CAN2RST;
-# endif
-#endif
     }
 
     /*
      * IRQ
      */
-#if UAVCAN_STM32_NUTTX
-# define IRQ_ATTACH(irq, handler)                          \
-    {                                                      \
-        const int res = irq_attach(irq, handler);          \
-        (void)res;                                         \
-        assert(res >= 0);                                  \
-        up_enable_irq(irq);                                \
-    }
-    IRQ_ATTACH(STM32_IRQ_CAN1TX,  can1_irq);
-    IRQ_ATTACH(STM32_IRQ_CAN1RX0, can1_irq);
-    IRQ_ATTACH(STM32_IRQ_CAN1RX1, can1_irq);
-# if UAVCAN_STM32_NUM_IFACES > 1
-    IRQ_ATTACH(STM32_IRQ_CAN2TX,  can2_irq);
-    IRQ_ATTACH(STM32_IRQ_CAN2RX0, can2_irq);
-    IRQ_ATTACH(STM32_IRQ_CAN2RX1, can2_irq);
-# endif
-# undef IRQ_ATTACH
-#elif UAVCAN_STM32_CHIBIOS || UAVCAN_STM32_BAREMETAL || UAVCAN_STM32_FREERTOS
+#ifdef UAVCAN_STM32_CHIBIOS || UAVCAN_STM32_BAREMETAL || UAVCAN_STM32_FREERTOS
     {
         CriticalSectionLocker lock;
         nvicEnableVector(CAN1_TX_IRQn,  UAVCAN_STM32_IRQ_PRIORITY_MASK);
         nvicEnableVector(CAN1_RX0_IRQn, UAVCAN_STM32_IRQ_PRIORITY_MASK);
         nvicEnableVector(CAN1_RX1_IRQn, UAVCAN_STM32_IRQ_PRIORITY_MASK);
-# if UAVCAN_STM32_NUM_IFACES > 1
-        nvicEnableVector(CAN2_TX_IRQn,  UAVCAN_STM32_IRQ_PRIORITY_MASK);
-        nvicEnableVector(CAN2_RX0_IRQn, UAVCAN_STM32_IRQ_PRIORITY_MASK);
-        nvicEnableVector(CAN2_RX1_IRQn, UAVCAN_STM32_IRQ_PRIORITY_MASK);
-# endif
     }
 #endif
 }
@@ -1061,21 +912,6 @@ int CanDriver::init(const uavcan::uint32_t bitrate, const CanIface::OperatingMod
         goto fail;
     }
 
-    /*
-     * CAN2
-     */
-#if UAVCAN_STM32_NUM_IFACES > 1
-    UAVCAN_STM32_LOG("Initing iface 1...");
-    ifaces[1] = &if1_;                          // Same thing here.
-    res = if1_.init(bitrate, mode);
-    if (res < 0)
-    {
-        UAVCAN_STM32_LOG("Iface 1 init failed %i", res);
-        ifaces[1] = UAVCAN_NULLPTR;
-        goto fail;
-    }
-#endif
-
     UAVCAN_STM32_LOG("CAN drv init OK");
     UAVCAN_ASSERT(res >= 0);
     return res;
@@ -1098,9 +934,6 @@ CanIface* CanDriver::getIface(uavcan::uint8_t iface_index)
 bool CanDriver::hadActivity()
 {
     bool ret = if0_.hadActivity();
-#if UAVCAN_STM32_NUM_IFACES > 1
-    ret |= if1_.hadActivity();
-#endif
     return ret;
 }
 
@@ -1111,57 +944,6 @@ bool CanDriver::hadActivity()
  */
 extern "C"
 {
-
-#if UAVCAN_STM32_NUTTX
-
-static int can1_irq(const int irq, void*)
-{
-    if (irq == STM32_IRQ_CAN1TX)
-    {
-        uavcan_stm32::handleTxInterrupt(0);
-    }
-    else if (irq == STM32_IRQ_CAN1RX0)
-    {
-        uavcan_stm32::handleRxInterrupt(0, 0);
-    }
-    else if (irq == STM32_IRQ_CAN1RX1)
-    {
-        uavcan_stm32::handleRxInterrupt(0, 1);
-    }
-    else
-    {
-        PANIC();
-    }
-    return 0;
-}
-
-# if UAVCAN_STM32_NUM_IFACES > 1
-
-static int can2_irq(const int irq, void*)
-{
-    if (irq == STM32_IRQ_CAN2TX)
-    {
-        uavcan_stm32::handleTxInterrupt(1);
-    }
-    else if (irq == STM32_IRQ_CAN2RX0)
-    {
-        uavcan_stm32::handleRxInterrupt(1, 0);
-    }
-    else if (irq == STM32_IRQ_CAN2RX1)
-    {
-        uavcan_stm32::handleRxInterrupt(1, 1);
-    }
-    else
-    {
-        PANIC();
-    }
-    return 0;
-}
-
-# endif
-
-#else // UAVCAN_STM32_NUTTX
-
 #if !defined(CAN1_TX_IRQHandler) ||\
     !defined(CAN1_RX0_IRQHandler) ||\
     !defined(CAN1_RX1_IRQHandler)
@@ -1191,40 +973,5 @@ UAVCAN_STM32_IRQ_HANDLER(CAN1_RX1_IRQHandler)
     uavcan_stm32::handleRxInterrupt(0, 1);
     UAVCAN_STM32_IRQ_EPILOGUE();
 }
-
-# if UAVCAN_STM32_NUM_IFACES > 1
-
-#if !defined(CAN2_TX_IRQHandler) ||\
-    !defined(CAN2_RX0_IRQHandler) ||\
-    !defined(CAN2_RX1_IRQHandler)
-# error "Misconfigured build"
-#endif
-
-UAVCAN_STM32_IRQ_HANDLER(CAN2_TX_IRQHandler);
-UAVCAN_STM32_IRQ_HANDLER(CAN2_TX_IRQHandler)
-{
-    UAVCAN_STM32_IRQ_PROLOGUE();
-    uavcan_stm32::handleTxInterrupt(1);
-    UAVCAN_STM32_IRQ_EPILOGUE();
-}
-
-UAVCAN_STM32_IRQ_HANDLER(CAN2_RX0_IRQHandler);
-UAVCAN_STM32_IRQ_HANDLER(CAN2_RX0_IRQHandler)
-{
-    UAVCAN_STM32_IRQ_PROLOGUE();
-    uavcan_stm32::handleRxInterrupt(1, 0);
-    UAVCAN_STM32_IRQ_EPILOGUE();
-}
-
-UAVCAN_STM32_IRQ_HANDLER(CAN2_RX1_IRQHandler);
-UAVCAN_STM32_IRQ_HANDLER(CAN2_RX1_IRQHandler)
-{
-    UAVCAN_STM32_IRQ_PROLOGUE();
-    uavcan_stm32::handleRxInterrupt(1, 1);
-    UAVCAN_STM32_IRQ_EPILOGUE();
-}
-
-# endif
-#endif // UAVCAN_STM32_NUTTX
 
 } // extern "C"
