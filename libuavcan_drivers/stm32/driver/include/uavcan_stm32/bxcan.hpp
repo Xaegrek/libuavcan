@@ -78,10 +78,6 @@ struct CanType
 CanType* const Can[UAVCAN_STM32_NUM_IFACES] =
 {
     reinterpret_cast<CanType*>(0x40006400)
-#if UAVCAN_STM32_NUM_IFACES > 1
-    ,
-    reinterpret_cast<CanType*>(0x40006800)
-#endif
 };
 
 /* CAN master control register */

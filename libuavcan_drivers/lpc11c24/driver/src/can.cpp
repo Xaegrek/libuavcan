@@ -133,36 +133,36 @@ public:
 RxQueue rx_queue;
 
 
-struct BitTimingSettings
-{
-    std::uint32_t canclkdiv;
-    std::uint32_t canbtr;
+// struct BitTimingSettings
+// {
+//     std::uint32_t canclkdiv;
+//     std::uint32_t canbtr;
 
-    bool isValid() const { return canbtr != 0; }
-};
+//     bool isValid() const { return canbtr != 0; }
+// };
 
-/**
- * http://www.bittiming.can-wiki.info
- */
-BitTimingSettings computeBitTimings(std::uint32_t bitrate)
-{
-    if (Chip_Clock_GetSystemClockRate() == 48000000) // 48 MHz is optimal for CAN timings
-    {
-        switch (bitrate)
-        {
-        case 1000000: return BitTimingSettings{ 0, 0x0505 }; // 8  quanta, 87.5%
-        case 500000:  return BitTimingSettings{ 0, 0x1c05 }; // 16 quanta, 87.5%
-        case 250000:  return BitTimingSettings{ 0, 0x1c0b }; // 16 quanta, 87.5%
-        case 125000:  return BitTimingSettings{ 0, 0x1c17 }; // 16 quanta, 87.5%
-        case 100000:  return BitTimingSettings{ 0, 0x1c1d }; // 16 quanta, 87.5%
-        default:      return BitTimingSettings{ 0, 0 };
-        }
-    }
-    else
-    {
-        return BitTimingSettings{ 0, 0 };
-    }
-}
+// /**
+//  * http://www.bittiming.can-wiki.info
+//  */
+// BitTimingSettings computeBitTimings(std::uint32_t bitrate)
+// {
+//     if (Chip_Clock_GetSystemClockRate() == 48000000) // 48 MHz is optimal for CAN timings
+//     {
+//         switch (bitrate)
+//         {
+//         case 1000000: return BitTimingSettings{ 0, 0x0505 }; // 8  quanta, 87.5%
+//         case 500000:  return BitTimingSettings{ 0, 0x1c05 }; // 16 quanta, 87.5%
+//         case 250000:  return BitTimingSettings{ 0, 0x1c0b }; // 16 quanta, 87.5%
+//         case 125000:  return BitTimingSettings{ 0, 0x1c17 }; // 16 quanta, 87.5%
+//         case 100000:  return BitTimingSettings{ 0, 0x1c1d }; // 16 quanta, 87.5%
+//         default:      return BitTimingSettings{ 0, 0 };
+//         }
+//     }
+//     else
+//     {
+//         return BitTimingSettings{ 0, 0 };
+//     }
+// }
 
 } // namespace
 
