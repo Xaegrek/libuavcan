@@ -1,0 +1,341 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AllIfacesDownException	include/uavcan_linux/exception.hpp	/^    AllIfacesDownException() : Exception("All ifaces are down", ENETDOWN) { }$/;"	f	class:uavcan_linux::AllIfacesDownException
+AllIfacesDownException	include/uavcan_linux/exception.hpp	/^class AllIfacesDownException : public Exception$/;"	c	namespace:uavcan_linux
+Base	include/uavcan_linux/helpers.hpp	/^    typedef NodeBase<uavcan::Node<NodeMemPoolSize>> Base;$/;"	t	class:uavcan_linux::Node
+Base	include/uavcan_linux/helpers.hpp	/^    typedef NodeBase<uavcan::SubNode<NodeMemPoolSize>> Base;$/;"	t	class:uavcan_linux::SubNode
+BlockingServiceClient	include/uavcan_linux/helpers.hpp	/^    BlockingServiceClient(uavcan::INode& node)$/;"	f	class:uavcan_linux::BlockingServiceClient
+BlockingServiceClient	include/uavcan_linux/helpers.hpp	/^class BlockingServiceClient : public uavcan::ServiceClient<DataType>$/;"	c	namespace:uavcan_linux
+Blue	apps/uavcan_dynamic_node_id_server.cpp	/^    Blue    = 34,$/;"	m	class:__anon2::CLIColor	file:
+Blue	apps/uavcan_monitor.cpp	/^    Blue    = 34,$/;"	m	class:CLIColor	file:
+CLIColor	apps/uavcan_dynamic_node_id_server.cpp	/^enum class CLIColor : unsigned$/;"	c	namespace:__anon2	file:
+CLIColor	apps/uavcan_monitor.cpp	/^enum class CLIColor : unsigned$/;"	c	file:
+CLIColorizer	apps/uavcan_dynamic_node_id_server.cpp	/^    explicit CLIColorizer(CLIColor c) : color_(c)$/;"	f	class:__anon2::CLIColor::CLIColorizer
+CLIColorizer	apps/uavcan_dynamic_node_id_server.cpp	/^class CLIColorizer$/;"	c	class:__anon2::CLIColor	file:
+CLIColorizer	apps/uavcan_monitor.cpp	/^    explicit CLIColorizer(CLIColor c) : color_(c)$/;"	f	class:CLIColor::CLIColorizer
+CLIColorizer	apps/uavcan_monitor.cpp	/^class CLIColorizer$/;"	c	class:CLIColor	file:
+ClockAdjustmentMode	include/uavcan_linux/clock.hpp	/^enum class ClockAdjustmentMode$/;"	c	namespace:uavcan_linux
+Cyan	apps/uavcan_dynamic_node_id_server.cpp	/^    Cyan    = 36,$/;"	m	class:__anon2::CLIColor	file:
+Cyan	apps/uavcan_monitor.cpp	/^    Cyan    = 36,$/;"	m	class:CLIColor	file:
+Default	apps/uavcan_dynamic_node_id_server.cpp	/^    Default = 39$/;"	m	class:__anon2::CLIColor	file:
+Default	apps/uavcan_monitor.cpp	/^    Default = 39$/;"	m	class:CLIColor	file:
+DefaultLogSink	include/uavcan_linux/helpers.hpp	/^class DefaultLogSink : public uavcan::ILogSink$/;"	c	namespace:uavcan_linux
+DriverPack	include/uavcan_linux/helpers.hpp	/^    explicit DriverPack(ClockAdjustmentMode clock_adjustment_mode,$/;"	f	struct:uavcan_linux::DriverPack
+DriverPack	include/uavcan_linux/helpers.hpp	/^struct DriverPack$/;"	s	namespace:uavcan_linux
+DriverPackPtr	include/uavcan_linux/helpers.hpp	/^typedef std::shared_ptr<DriverPack> DriverPackPtr;$/;"	t	namespace:uavcan_linux
+ENFORCE	apps/debug.hpp	13;"	d
+EnumKeyHash	apps/uavcan_dynamic_node_id_server.cpp	/^    struct EnumKeyHash$/;"	s	class:__anon2::EventTracer	file:
+Event	apps/test_multithreading.cpp	/^    class Event$/;"	c	class:VirtualCanDriver	file:
+EventStatisticsRecord	apps/uavcan_dynamic_node_id_server.cpp	/^        EventStatisticsRecord()$/;"	f	struct:__anon2::EventTracer::EventStatisticsRecord
+EventStatisticsRecord	apps/uavcan_dynamic_node_id_server.cpp	/^    struct EventStatisticsRecord$/;"	s	class:__anon2::EventTracer	file:
+EventTracer	apps/uavcan_dynamic_node_id_server.cpp	/^    EventTracer(unsigned num_last_events_to_keep)$/;"	f	class:__anon2::EventTracer
+EventTracer	apps/uavcan_dynamic_node_id_server.cpp	/^class EventTracer : public uavcan_posix::dynamic_node_id_server::FileEventTracer$/;"	c	namespace:__anon2	file:
+Exception	include/uavcan_linux/exception.hpp	/^    explicit Exception(const std::string& descr, int use_errno = errno)$/;"	f	class:uavcan_linux::Exception
+Exception	include/uavcan_linux/exception.hpp	/^class Exception : public std::runtime_error$/;"	c	namespace:uavcan_linux
+Green	apps/uavcan_dynamic_node_id_server.cpp	/^    Green   = 32,$/;"	m	class:__anon2::CLIColor	file:
+Green	apps/uavcan_monitor.cpp	/^    Green   = 32,$/;"	m	class:CLIColor	file:
+INodePtr	include/uavcan_linux/helpers.hpp	/^typedef std::shared_ptr<uavcan::INode> INodePtr;$/;"	t	namespace:uavcan_linux
+ITxQueueInjector	apps/test_multithreading.cpp	/^class ITxQueueInjector$/;"	c	file:
+IfaceWrapper	include/uavcan_linux/socketcan.hpp	/^        IfaceWrapper(const SystemClock& clock, int fd) : SocketCanIface(clock, fd) { }$/;"	f	class:uavcan_linux::SocketCanDriver::IfaceWrapper
+IfaceWrapper	include/uavcan_linux/socketcan.hpp	/^    class IfaceWrapper : public SocketCanIface$/;"	c	class:uavcan_linux::SocketCanDriver
+Int1e6	include/uavcan_linux/clock.hpp	/^    static constexpr std::int64_t Int1e6   = 1000000;$/;"	m	class:uavcan_linux::SystemClock
+Item	apps/test_multithreading.cpp	/^        Item(Args... args) : payload(args...) { }$/;"	f	struct:Queue::Item
+Item	apps/test_multithreading.cpp	/^    struct Item : public uavcan::LinkedListNode<Item>$/;"	s	class:Queue	file:
+LibuavcanErrorException	include/uavcan_linux/exception.hpp	/^    explicit LibuavcanErrorException(std::int16_t uavcan_error_code) :$/;"	f	class:uavcan_linux::LibuavcanErrorException
+LibuavcanErrorException	include/uavcan_linux/exception.hpp	/^class LibuavcanErrorException : public Exception$/;"	c	namespace:uavcan_linux
+MachineID	include/uavcan_linux/system_utils.hpp	/^    typedef std::array<std::uint8_t, MachineIDSize> MachineID;$/;"	t	class:uavcan_linux::MachineIDReader
+MachineIDReader	include/uavcan_linux/system_utils.hpp	/^    MachineIDReader(const std::vector<std::string>& extra_search_locations = {})$/;"	f	class:uavcan_linux::MachineIDReader
+MachineIDReader	include/uavcan_linux/system_utils.hpp	/^class MachineIDReader$/;"	c	namespace:uavcan_linux
+MachineIDSize	include/uavcan_linux/system_utils.hpp	/^    static constexpr int MachineIDSize = 16;$/;"	m	class:uavcan_linux::MachineIDReader
+Magenta	apps/uavcan_dynamic_node_id_server.cpp	/^    Magenta = 35,$/;"	m	class:__anon2::CLIColor	file:
+Magenta	apps/uavcan_monitor.cpp	/^    Magenta = 35,$/;"	m	class:CLIColor	file:
+MaxNumLastEvents	apps/uavcan_dynamic_node_id_server.cpp	/^constexpr int MaxNumLastEvents = 30;$/;"	m	namespace:__anon2	file:
+MinUpdateInterval	apps/uavcan_dynamic_node_id_server.cpp	/^constexpr int MinUpdateInterval = 100;$/;"	m	namespace:__anon2	file:
+Monitor	apps/uavcan_monitor.cpp	/^    explicit Monitor(uavcan_linux::NodePtr node)$/;"	f	class:CLIColor::Monitor
+Monitor	apps/uavcan_monitor.cpp	/^class Monitor : public uavcan::NodeStatusMonitor$/;"	c	class:CLIColor	file:
+Node	include/uavcan_linux/helpers.hpp	/^    Node(uavcan::ICanDriver& can_driver, uavcan::ISystemClock& clock) :$/;"	f	class:uavcan_linux::Node
+Node	include/uavcan_linux/helpers.hpp	/^    explicit Node(DriverPackPtr driver_pack) :$/;"	f	class:uavcan_linux::Node
+Node	include/uavcan_linux/helpers.hpp	/^class Node : public NodeBase<uavcan::Node<NodeMemPoolSize>>$/;"	c	namespace:uavcan_linux
+NodeBase	include/uavcan_linux/helpers.hpp	/^    NodeBase(uavcan::ICanDriver& can_driver, uavcan::ISystemClock& clock) :$/;"	f	class:uavcan_linux::NodeBase
+NodeBase	include/uavcan_linux/helpers.hpp	/^    explicit NodeBase(DriverPackPtr driver_pack)$/;"	f	class:uavcan_linux::NodeBase
+NodeBase	include/uavcan_linux/helpers.hpp	/^class NodeBase : public NodeType$/;"	c	namespace:uavcan_linux
+NodeMemPoolSize	include/uavcan_linux/helpers.hpp	/^static constexpr std::size_t NodeMemPoolSize = 1024 * 512;  \/\/\/< This shall be enough for any possible use case$/;"	m	namespace:uavcan_linux
+NodePtr	include/uavcan_linux/helpers.hpp	/^typedef std::shared_ptr<Node> NodePtr;$/;"	t	namespace:uavcan_linux
+NumFilters	include/uavcan_linux/socketcan.hpp	/^    static constexpr unsigned NumFilters = 8;$/;"	m	class:uavcan_linux::SocketCanIface
+Options	apps/test_file_server.cpp	/^struct Options$/;"	s	namespace:__anon4	file:
+Options	apps/uavcan_dynamic_node_id_server.cpp	/^struct Options$/;"	s	class:__anon2::CLIColor	file:
+Queue	apps/test_multithreading.cpp	/^    Queue(uavcan::IPoolAllocator& arg_allocator, std::size_t block_allocation_quota) :$/;"	f	class:Queue
+Queue	apps/test_multithreading.cpp	/^class Queue$/;"	c	file:
+RecentEvent	apps/uavcan_dynamic_node_id_server.cpp	/^        RecentEvent(uavcan::MonotonicDuration arg_time_since_startup,$/;"	f	struct:__anon2::EventTracer::RecentEvent
+RecentEvent	apps/uavcan_dynamic_node_id_server.cpp	/^    struct RecentEvent$/;"	s	class:__anon2::EventTracer	file:
+Red	apps/uavcan_dynamic_node_id_server.cpp	/^    Red     = 31,$/;"	m	class:__anon2::CLIColor	file:
+Red	apps/uavcan_monitor.cpp	/^    Red     = 31,$/;"	m	class:CLIColor	file:
+RxItem	apps/test_multithreading.cpp	/^        RxItem(const uavcan::CanRxFrame& arg_frame, uavcan::CanIOFlags arg_flags) :$/;"	f	struct:VirtualCanIface::RxItem
+RxItem	apps/test_multithreading.cpp	/^    struct RxItem$/;"	s	class:VirtualCanIface	file:
+RxItem	include/uavcan_linux/socketcan.hpp	/^        RxItem()$/;"	f	struct:uavcan_linux::SocketCanIface::RxItem
+RxItem	include/uavcan_linux/socketcan.hpp	/^    struct RxItem$/;"	s	class:uavcan_linux::SocketCanIface
+STRINGIZE	apps/debug.hpp	11;"	d
+STRINGIZE2	apps/debug.hpp	10;"	d
+SocketCanDriver	include/uavcan_linux/socketcan.hpp	/^    explicit SocketCanDriver(const SystemClock& clock)$/;"	f	class:uavcan_linux::SocketCanDriver
+SocketCanDriver	include/uavcan_linux/socketcan.hpp	/^class SocketCanDriver : public uavcan::ICanDriver$/;"	c	namespace:uavcan_linux
+SocketCanError	include/uavcan_linux/socketcan.hpp	/^enum class SocketCanError$/;"	c	namespace:uavcan_linux
+SocketCanIface	include/uavcan_linux/socketcan.hpp	/^    SocketCanIface(const SystemClock& clock, int socket_fd, int max_frames_in_socket_tx_queue = 2)$/;"	f	class:uavcan_linux::SocketCanIface
+SocketCanIface	include/uavcan_linux/socketcan.hpp	/^class SocketCanIface : public uavcan::ICanIface$/;"	c	namespace:uavcan_linux
+SocketReadFailure	include/uavcan_linux/socketcan.hpp	/^    SocketReadFailure,$/;"	m	class:uavcan_linux::SocketCanError
+SocketWriteFailure	include/uavcan_linux/socketcan.hpp	/^    SocketWriteFailure,$/;"	m	class:uavcan_linux::SocketCanError
+StdinLineReader	apps/uavcan_nodetool.cpp	/^    StdinLineReader()$/;"	f	class:__anon3::StdinLineReader
+StdinLineReader	apps/uavcan_nodetool.cpp	/^class StdinLineReader$/;"	c	namespace:__anon3	file:
+SubNode	include/uavcan_linux/helpers.hpp	/^    SubNode(uavcan::ICanDriver& can_driver, uavcan::ISystemClock& clock) : Base(can_driver, clock) { }$/;"	f	class:uavcan_linux::SubNode
+SubNode	include/uavcan_linux/helpers.hpp	/^    explicit SubNode(DriverPackPtr driver_pack) : Base(driver_pack) { }$/;"	f	class:uavcan_linux::SubNode
+SubNode	include/uavcan_linux/helpers.hpp	/^class SubNode : public NodeBase<uavcan::SubNode<NodeMemPoolSize>>$/;"	c	namespace:uavcan_linux
+SubNodePtr	include/uavcan_linux/helpers.hpp	/^typedef std::shared_ptr<SubNode> SubNodePtr;$/;"	t	namespace:uavcan_linux
+Super	include/uavcan_linux/helpers.hpp	/^    typedef uavcan::ServiceClient<DataType> Super;$/;"	t	class:uavcan_linux::BlockingServiceClient
+SystemClock	include/uavcan_linux/clock.hpp	/^    explicit SystemClock(ClockAdjustmentMode adj_mode = detectPreferredClockAdjustmentMode())$/;"	f	class:uavcan_linux::SystemClock
+SystemClock	include/uavcan_linux/clock.hpp	/^class SystemClock : public uavcan::ISystemClock$/;"	c	namespace:uavcan_linux
+SystemWide	include/uavcan_linux/clock.hpp	/^    SystemWide,      \/\/\/< Adjust the clock globally for the whole system; requires root privileges$/;"	m	class:uavcan_linux::ClockAdjustmentMode
+TimerPtr	include/uavcan_linux/helpers.hpp	/^typedef std::shared_ptr<uavcan::Timer> TimerPtr;$/;"	t	namespace:uavcan_linux
+TxItem	include/uavcan_linux/socketcan.hpp	/^        TxItem(const uavcan::CanFrame& arg_frame, uavcan::MonotonicTime arg_deadline,$/;"	f	struct:uavcan_linux::SocketCanIface::TxItem
+TxItem	include/uavcan_linux/socketcan.hpp	/^    struct TxItem$/;"	s	class:uavcan_linux::SocketCanIface
+UAVCAN_DEBUG	apps/test_multithreading.cpp	6;"	d	file:
+UInt1e6	include/uavcan_linux/clock.hpp	/^    static constexpr std::uint64_t UInt1e6 = 1000000;$/;"	m	class:uavcan_linux::SystemClock
+VirtualCanDriver	apps/test_multithreading.cpp	/^    VirtualCanDriver(unsigned arg_num_ifaces) : num_ifaces_(arg_num_ifaces)$/;"	f	class:VirtualCanDriver
+VirtualCanDriver	apps/test_multithreading.cpp	/^class VirtualCanDriver : public uavcan::ICanDriver,$/;"	c	file:
+VirtualCanIface	apps/test_multithreading.cpp	/^    VirtualCanIface(uavcan::IPoolAllocator& allocator, uavcan::ISystemClock& clock,$/;"	f	class:VirtualCanIface
+VirtualCanIface	apps/test_multithreading.cpp	/^class VirtualCanIface : public uavcan::ICanIface,$/;"	c	file:
+White	apps/uavcan_dynamic_node_id_server.cpp	/^    White   = 37,$/;"	m	class:__anon2::CLIColor	file:
+White	apps/uavcan_monitor.cpp	/^    White   = 37,$/;"	m	class:CLIColor	file:
+Yellow	apps/uavcan_dynamic_node_id_server.cpp	/^    Yellow  = 33,$/;"	m	class:__anon2::CLIColor	file:
+Yellow	apps/uavcan_monitor.cpp	/^    Yellow  = 33,$/;"	m	class:CLIColor	file:
+addIface	include/uavcan_linux/socketcan.hpp	/^    int addIface(const std::string& iface_name)$/;"	f	class:uavcan_linux::SocketCanDriver
+addRxFrame	apps/test_multithreading.cpp	/^    void addRxFrame(const uavcan::CanRxFrame& frame, uavcan::CanIOFlags flags)$/;"	f	class:VirtualCanIface
+adj_mode_	include/uavcan_linux/clock.hpp	/^    const ClockAdjustmentMode adj_mode_;$/;"	m	class:uavcan_linux::SystemClock
+allocator_	apps/test_multithreading.cpp	/^    uavcan::LimitedPoolAllocator allocator_;$/;"	m	class:Queue	file:
+allocator_	apps/test_multithreading.cpp	/^    uavcan::PoolAllocator<SharedMemoryPoolSize, uavcan::MemPoolBlockSize> allocator_;   \/\/\/< Shared across all ifaces$/;"	m	class:VirtualCanDriver	file:
+argument	apps/uavcan_dynamic_node_id_server.cpp	/^        const std::int64_t argument;$/;"	m	struct:__anon2::EventTracer::RecentEvent	file:
+blockingCall	include/uavcan_linux/helpers.hpp	/^    int blockingCall(uavcan::NodeID server_node_id, const typename DataType::Request& request)$/;"	f	class:uavcan_linux::BlockingServiceClient
+blockingCall	include/uavcan_linux/helpers.hpp	/^    int blockingCall(uavcan::NodeID server_node_id, const typename DataType::Request& request,$/;"	f	class:uavcan_linux::BlockingServiceClient
+call	apps/uavcan_nodetool.cpp	/^typename DataType::Response call(uavcan_linux::BlockingServiceClient<DataType>& client,$/;"	f	namespace:__anon3
+call_was_successful_	include/uavcan_linux/helpers.hpp	/^    bool call_was_successful_;$/;"	m	class:uavcan_linux::BlockingServiceClient
+callback	include/uavcan_linux/helpers.hpp	/^    void callback(const uavcan::ServiceCallResult<DataType>& res)$/;"	f	class:uavcan_linux::BlockingServiceClient
+can	include/uavcan_linux/helpers.hpp	/^    std::shared_ptr<uavcan::ICanDriver> can;$/;"	m	struct:uavcan_linux::DriverPack
+checkHWFilters	include/uavcan_linux/socketcan.hpp	/^    bool checkHWFilters(const ::can_frame& frame) const$/;"	f	class:uavcan_linux::SocketCanIface
+clock	include/uavcan_linux/helpers.hpp	/^    SystemClock clock;$/;"	m	struct:uavcan_linux::DriverPack
+clock_	apps/test_multithreading.cpp	/^    uavcan_linux::SystemClock clock_;$/;"	m	class:VirtualCanDriver	file:
+clock_	apps/uavcan_dynamic_node_id_server.cpp	/^    uavcan_linux::SystemClock clock_;$/;"	m	class:__anon2::EventTracer	file:
+clock_	include/uavcan_linux/socketcan.hpp	/^    const SystemClock& clock_;$/;"	m	class:uavcan_linux::SocketCanDriver
+clock_	include/uavcan_linux/socketcan.hpp	/^    const SystemClock& clock_;$/;"	m	class:uavcan_linux::SocketCanIface
+cluster_size	apps/uavcan_dynamic_node_id_server.cpp	/^    std::uint8_t cluster_size = 0;$/;"	m	struct:__anon2::CLIColor::Options	file:
+code	apps/uavcan_dynamic_node_id_server.cpp	/^        const uavcan::dynamic_node_id_server::TraceCode code;$/;"	m	struct:__anon2::EventTracer::RecentEvent	file:
+collectRelevantEvents	apps/uavcan_dynamic_node_id_server.cpp	/^collectRelevantEvents(const EventTracer& event_tracer, const unsigned num_events)$/;"	f	namespace:__anon2
+color_	apps/uavcan_dynamic_node_id_server.cpp	/^    const CLIColor color_;$/;"	m	class:__anon2::CLIColor::CLIColorizer	file:
+color_	apps/uavcan_monitor.cpp	/^    const CLIColor color_;$/;"	m	class:CLIColor::CLIColorizer	file:
+commands	apps/uavcan_nodetool.cpp	/^              > commands =$/;"	m	namespace:__anon3	file:
+confirmSentFrame	include/uavcan_linux/socketcan.hpp	/^    void confirmSentFrame()$/;"	f	class:uavcan_linux::SocketCanIface
+count	apps/uavcan_dynamic_node_id_server.cpp	/^        std::uint64_t count;$/;"	m	struct:__anon2::EventTracer::EventStatisticsRecord	file:
+cv_	apps/test_multithreading.cpp	/^        std::condition_variable cv_;$/;"	m	class:VirtualCanDriver::Event	file:
+deadline	include/uavcan_linux/socketcan.hpp	/^        uavcan::MonotonicTime deadline;$/;"	m	struct:uavcan_linux::SocketCanIface::TxItem
+deinitialize	scripts/uavcan_add_slcan	/^function deinitialize() {$/;"	f
+detectPreferredClockAdjustmentMode	include/uavcan_linux/clock.hpp	/^    static ClockAdjustmentMode detectPreferredClockAdjustmentMode()$/;"	f	class:uavcan_linux::SystemClock
+die	scripts/uavcan_add_slcan	/^function die() { echo $@ >&2; exit 1; }$/;"	f
+die	scripts/uavcan_add_vcan	/^function die() { echo $@ >&2; exit 1; }$/;"	f
+down_	include/uavcan_linux/socketcan.hpp	/^        bool down_ = false;$/;"	m	class:uavcan_linux::SocketCanDriver::IfaceWrapper
+driver_pack_	include/uavcan_linux/helpers.hpp	/^    DriverPackPtr driver_pack_;$/;"	m	class:uavcan_linux::NodeBase
+enforce	include/uavcan_linux/helpers.hpp	/^    static void enforce(int error, const std::string& msg)$/;"	f	class:uavcan_linux::NodeBase
+errno_	include/uavcan_linux/exception.hpp	/^    const int errno_;$/;"	m	class:uavcan_linux::Exception
+error_	include/uavcan_linux/exception.hpp	/^    const std::int16_t error_;$/;"	m	class:uavcan_linux::LibuavcanErrorException
+errors_	include/uavcan_linux/socketcan.hpp	/^    std::map<SocketCanError, std::uint64_t> errors_;$/;"	m	class:uavcan_linux::SocketCanIface
+event_	apps/test_multithreading.cpp	/^    Event event_;               \/\/\/< Used to unblock the select() call when IO happens.$/;"	m	class:VirtualCanDriver	file:
+event_counters_	apps/uavcan_dynamic_node_id_server.cpp	/^    std::unordered_map<uavcan::dynamic_node_id_server::TraceCode, EventStatisticsRecord, EnumKeyHash> event_counters_;$/;"	m	class:__anon2::EventTracer	file:
+fd_	include/uavcan_linux/socketcan.hpp	/^    const int fd_;$/;"	m	class:uavcan_linux::SocketCanIface
+flags	apps/test_multithreading.cpp	/^        const uavcan::CanIOFlags flags;$/;"	m	struct:VirtualCanIface::RxItem	file:
+flags	include/uavcan_linux/socketcan.hpp	/^        uavcan::CanIOFlags flags = 0;$/;"	m	struct:uavcan_linux::SocketCanIface::TxItem
+flags	include/uavcan_linux/socketcan.hpp	/^        uavcan::CanIOFlags flags;$/;"	m	struct:uavcan_linux::SocketCanIface::RxItem
+flushTxQueueTo	apps/test_multithreading.cpp	/^    void flushTxQueueTo(uavcan::INode& main_node, std::uint8_t iface_index)$/;"	f	class:VirtualCanIface
+frame	apps/test_multithreading.cpp	/^        const uavcan::CanRxFrame frame;$/;"	m	struct:VirtualCanIface::RxItem	file:
+frame	include/uavcan_linux/socketcan.hpp	/^        uavcan::CanFrame frame;$/;"	m	struct:uavcan_linux::SocketCanIface::RxItem
+frame	include/uavcan_linux/socketcan.hpp	/^        uavcan::CanFrame frame;$/;"	m	struct:uavcan_linux::SocketCanIface::TxItem
+frames_in_socket_tx_queue_	include/uavcan_linux/socketcan.hpp	/^    unsigned frames_in_socket_tx_queue_ = 0;$/;"	m	class:uavcan_linux::SocketCanIface
+getAdjustmentCount	include/uavcan_linux/clock.hpp	/^    std::uint64_t getAdjustmentCount() const$/;"	f	class:uavcan_linux::SystemClock
+getAdjustmentMode	include/uavcan_linux/clock.hpp	/^    ClockAdjustmentMode getAdjustmentMode() const { return adj_mode_; }$/;"	f	class:uavcan_linux::SystemClock
+getColorHash	apps/uavcan_dynamic_node_id_server.cpp	/^CLIColor getColorHash(unsigned value) { return CLIColor(31 + value % 7); }$/;"	f	class:__anon2::CLIColor	file:
+getDataTypeName	include/uavcan_linux/helpers.hpp	/^    static std::string getDataTypeName()$/;"	f	class:uavcan_linux::NodeBase
+getDefaultSearchLocations	include/uavcan_linux/system_utils.hpp	/^    static std::vector<std::string> getDefaultSearchLocations()$/;"	f	class:uavcan_linux::MachineIDReader
+getDriverPack	include/uavcan_linux/helpers.hpp	/^    DriverPackPtr& getDriverPack() { return driver_pack_; }$/;"	f	class:uavcan_linux::NodeBase
+getDriverPack	include/uavcan_linux/helpers.hpp	/^    const DriverPackPtr& getDriverPack() const { return driver_pack_; }$/;"	f	class:uavcan_linux::NodeBase
+getErrno	include/uavcan_linux/exception.hpp	/^    int getErrno() const { return errno_; }$/;"	f	class:uavcan_linux::Exception
+getErrors	include/uavcan_linux/socketcan.hpp	/^    const decltype(errors_) & getErrors() const { return errors_; }$/;"	f	class:uavcan_linux::SocketCanIface
+getEventByIndex	apps/uavcan_dynamic_node_id_server.cpp	/^    const RecentEvent& getEventByIndex(unsigned index) const { return last_events_.at(index); }$/;"	f	class:__anon2::EventTracer
+getEventCounters	apps/uavcan_dynamic_node_id_server.cpp	/^    const decltype(event_counters_)& getEventCounters() const { return event_counters_; }$/;"	f	class:__anon2::EventTracer
+getFileDescriptor	include/uavcan_linux/socketcan.hpp	/^    int getFileDescriptor() const { return fd_; }$/;"	f	class:uavcan_linux::SocketCanIface
+getGradualAdjustmentCount	include/uavcan_linux/clock.hpp	/^    std::uint64_t getGradualAdjustmentCount() const { return gradual_adj_cnt_; }$/;"	f	class:uavcan_linux::SystemClock
+getGradualAdjustmentLimit	include/uavcan_linux/clock.hpp	/^    uavcan::UtcDuration getGradualAdjustmentLimit() const { return gradual_adj_limit_; }$/;"	f	class:uavcan_linux::SystemClock
+getLibuavcanErrorCode	include/uavcan_linux/exception.hpp	/^    std::int16_t getLibuavcanErrorCode() const { return error_; }$/;"	f	class:uavcan_linux::LibuavcanErrorException
+getLine	apps/uavcan_nodetool.cpp	/^    std::string getLine()$/;"	f	class:__anon3::StdinLineReader
+getNumEvents	apps/uavcan_dynamic_node_id_server.cpp	/^    unsigned getNumEvents() const { return last_events_.size(); }$/;"	f	class:__anon2::EventTracer
+getPrivateAdjustment	include/uavcan_linux/clock.hpp	/^    uavcan::UtcDuration getPrivateAdjustment() const { return private_adj_; }$/;"	f	class:uavcan_linux::SystemClock
+getResponse	include/uavcan_linux/helpers.hpp	/^    const typename DataType::Response& getResponse() const { return response_; }$/;"	f	class:uavcan_linux::BlockingServiceClient
+getSplitLine	apps/uavcan_nodetool.cpp	/^    std::vector<std::string> getSplitLine()$/;"	f	class:__anon3::StdinLineReader
+getStepAdjustmentCount	include/uavcan_linux/clock.hpp	/^    std::uint64_t getStepAdjustmentCount() const { return step_adj_cnt_; }$/;"	f	class:uavcan_linux::SystemClock
+getTableHeader	apps/uavcan_dynamic_node_id_server.cpp	/^        static const char* getTableHeader()$/;"	f	struct:__anon2::EventTracer::RecentEvent
+getTerminalSize	apps/uavcan_dynamic_node_id_server.cpp	/^::winsize getTerminalSize()$/;"	f	namespace:__anon2
+gradual_adj_cnt_	include/uavcan_linux/clock.hpp	/^    std::uint64_t gradual_adj_cnt_;$/;"	m	class:uavcan_linux::SystemClock
+gradual_adj_limit_	include/uavcan_linux/clock.hpp	/^    uavcan::UtcDuration gradual_adj_limit_;$/;"	m	class:uavcan_linux::SystemClock
+hadEvents	apps/uavcan_dynamic_node_id_server.cpp	/^    bool hadEvents()$/;"	f	class:__anon2::EventTracer
+had_events_	apps/uavcan_dynamic_node_id_server.cpp	/^    bool had_events_ = false;$/;"	m	class:__anon2::EventTracer	file:
+handle_tty	scripts/uavcan_add_slcan	/^function handle_tty() {$/;"	f
+hasDataInRxQueue	apps/test_multithreading.cpp	/^    bool hasDataInRxQueue() const$/;"	f	class:VirtualCanIface
+hasPendingInput	apps/uavcan_nodetool.cpp	/^    bool hasPendingInput() const$/;"	f	class:__anon3::StdinLineReader
+hasReadyRx	include/uavcan_linux/socketcan.hpp	/^    bool hasReadyRx() const { return !rx_queue_.empty(); }$/;"	f	class:uavcan_linux::SocketCanIface
+hasReadyTx	include/uavcan_linux/socketcan.hpp	/^    bool hasReadyTx() const$/;"	f	class:uavcan_linux::SocketCanIface
+healthToColoredString	apps/uavcan_monitor.cpp	/^    static std::pair<CLIColor, std::string> healthToColoredString(const std::uint8_t health)$/;"	f	class:CLIColor::Monitor	file:
+hit	apps/uavcan_dynamic_node_id_server.cpp	/^        void hit(uavcan::MonotonicTime ts)$/;"	f	struct:__anon2::EventTracer::EventStatisticsRecord
+hw_filters_container_	include/uavcan_linux/socketcan.hpp	/^    std::vector<::can_filter> hw_filters_container_;$/;"	m	class:uavcan_linux::SocketCanIface
+ifaces	apps/test_file_server.cpp	/^    std::vector<std::string> ifaces;$/;"	m	struct:__anon4::Options	file:
+ifaces	apps/uavcan_dynamic_node_id_server.cpp	/^    std::vector<std::string> ifaces;$/;"	m	struct:__anon2::CLIColor::Options	file:
+ifaces_	apps/test_multithreading.cpp	/^    uavcan::LazyConstructor<VirtualCanIface> ifaces_[uavcan::MaxCanIfaces];$/;"	m	class:VirtualCanDriver	file:
+ifaces_	include/uavcan_linux/socketcan.hpp	/^    std::vector<std::unique_ptr<IfaceWrapper>> ifaces_;$/;"	m	class:uavcan_linux::SocketCanDriver
+incrementNumFramesInSocketTxQueue	include/uavcan_linux/socketcan.hpp	/^    void incrementNumFramesInSocketTxQueue()$/;"	f	class:uavcan_linux::SocketCanIface
+initMainNode	apps/test_multithreading.cpp	/^static uavcan_linux::NodePtr initMainNode(const std::vector<std::string>& ifaces, uavcan::NodeID nid,$/;"	f	file:
+initNode	apps/test_file_server.cpp	/^uavcan_linux::NodePtr initNode(const std::vector<std::string>& ifaces, uavcan::NodeID nid, const std::string& name)$/;"	f	namespace:__anon4
+initNode	apps/test_node.cpp	/^static uavcan_linux::NodePtr initNode(const std::vector<std::string>& ifaces, uavcan::NodeID nid,$/;"	f	file:
+initNode	apps/test_node_comm.cpp	/^static uavcan_linux::NodePtr initNode(const std::vector<std::string>& ifaces, uavcan::NodeID nid,$/;"	f	file:
+initNode	apps/test_time_sync.cpp	/^static uavcan_linux::NodePtr initNode(const std::vector<std::string>& ifaces, uavcan::NodeID nid,$/;"	f	file:
+initNode	apps/uavcan_dynamic_node_id_server.cpp	/^uavcan_linux::NodePtr initNode(const std::vector<std::string>& ifaces, uavcan::NodeID nid, const std::string& name)$/;"	f	namespace:__anon2
+initNode	apps/uavcan_nodetool.cpp	/^uavcan_linux::NodePtr initNode(const std::vector<std::string>& ifaces, uavcan::NodeID nid, const std::string& name)$/;"	f	namespace:__anon3
+initNodeInPassiveMode	apps/uavcan_monitor.cpp	/^static uavcan_linux::NodePtr initNodeInPassiveMode(const std::vector<std::string>& ifaces, const std::string& node_name)$/;"	f	class:CLIColor	file:
+initNodeWithDynamicID	apps/test_dynamic_node_id_client.cpp	/^uavcan_linux::NodePtr initNodeWithDynamicID(const std::vector<std::string>& ifaces,$/;"	f	namespace:__anon5
+initSubNode	apps/test_multithreading.cpp	/^static uavcan_linux::SubNodePtr initSubNode(unsigned num_ifaces, uavcan::INode& main_node)$/;"	f	file:
+isDown	include/uavcan_linux/socketcan.hpp	/^        bool isDown() const { return down_; }$/;"	f	class:uavcan_linux::SocketCanDriver::IfaceWrapper
+isEmpty	apps/test_multithreading.cpp	/^    bool isEmpty() const { return list_.isEmpty(); }$/;"	f	class:Queue
+isIfaceDown	include/uavcan_linux/socketcan.hpp	/^    bool isIfaceDown(std::uint8_t iface_index) const$/;"	f	class:uavcan_linux::SocketCanDriver
+last_events_	apps/uavcan_dynamic_node_id_server.cpp	/^    std::deque<RecentEvent> last_events_;$/;"	m	class:__anon2::EventTracer	file:
+last_occurence	apps/uavcan_dynamic_node_id_server.cpp	/^        uavcan::MonotonicTime last_occurence;$/;"	m	struct:__anon2::EventTracer::EventStatisticsRecord	file:
+list_	apps/test_multithreading.cpp	/^    uavcan::LinkedListRoot<Item> list_;$/;"	m	class:Queue	file:
+log_sink_	include/uavcan_linux/helpers.hpp	/^    DefaultLogSink log_sink_;$/;"	m	class:uavcan_linux::Node
+m_	apps/test_multithreading.cpp	/^        std::mutex m_;$/;"	m	class:VirtualCanDriver::Event	file:
+main	apps/test_clock.cpp	/^int main()$/;"	f
+main	apps/test_dynamic_node_id_client.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_file_server.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_multithreading.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_node.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_node_comm.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_posix.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_socket.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_system_utils.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/test_time_sync.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	apps/uavcan_dynamic_node_id_server.cpp	/^int main(int argc, const char** argv)$/;"	f	namespace:__anon2
+main	apps/uavcan_monitor.cpp	/^int main(int argc, const char** argv)$/;"	f	class:CLIColor	file:
+main	apps/uavcan_nodetool.cpp	/^int main(int argc, const char** argv)$/;"	f
+makeApplicationID	include/uavcan_linux/system_utils.hpp	/^inline std::array<std::uint8_t, 16> makeApplicationID(const MachineIDReader::MachineID& machine_id,$/;"	f	namespace:uavcan_linux
+makeBlockingServiceClient	include/uavcan_linux/helpers.hpp	/^    BlockingServiceClientPtr<DataType> makeBlockingServiceClient()$/;"	f	class:uavcan_linux::NodeBase
+makeErrorString	include/uavcan_linux/exception.hpp	/^    static std::string makeErrorString(const std::string& descr, int use_errno)$/;"	f	class:uavcan_linux::Exception
+makeErrorString	include/uavcan_linux/exception.hpp	/^    static std::string makeErrorString(std::int16_t e)$/;"	f	class:uavcan_linux::LibuavcanErrorException
+makeFrame	apps/test_socket.cpp	/^static uavcan::CanFrame makeFrame(std::uint32_t id, const std::string& data)$/;"	f	file:
+makeNode	include/uavcan_linux/helpers.hpp	/^static inline NodePtr makeNode(const DriverType& driver,$/;"	f	namespace:uavcan_linux
+makeNode	include/uavcan_linux/helpers.hpp	/^static inline NodePtr makeNode(const std::shared_ptr<uavcan::ICanDriver>& can_driver,$/;"	f	namespace:uavcan_linux
+makeNode	include/uavcan_linux/helpers.hpp	/^static inline NodePtr makeNode(const std::vector<std::string>& iface_names,$/;"	f	namespace:uavcan_linux
+makePublisher	include/uavcan_linux/helpers.hpp	/^    PublisherPtr<DataType> makePublisher(uavcan::MonotonicDuration tx_timeout =$/;"	f	class:uavcan_linux::NodeBase
+makeServiceClient	include/uavcan_linux/helpers.hpp	/^    ServiceClientPtr<DataType> makeServiceClient(const typename uavcan::ServiceClient<DataType>::Callback& cb)$/;"	f	class:uavcan_linux::NodeBase
+makeServiceServer	include/uavcan_linux/helpers.hpp	/^    ServiceServerPtr<DataType> makeServiceServer(const typename uavcan::ServiceServer<DataType>::Callback& cb)$/;"	f	class:uavcan_linux::NodeBase
+makeSocketCanFrame	include/uavcan_linux/socketcan.hpp	/^    static inline ::can_frame makeSocketCanFrame(const uavcan::CanFrame& uavcan_frame)$/;"	f	class:uavcan_linux::SocketCanIface
+makeSubNode	include/uavcan_linux/helpers.hpp	/^static inline SubNodePtr makeSubNode(const DriverType& driver,$/;"	f	namespace:uavcan_linux
+makeSubNode	include/uavcan_linux/helpers.hpp	/^static inline SubNodePtr makeSubNode(const std::shared_ptr<uavcan::ICanDriver>& can_driver,$/;"	f	namespace:uavcan_linux
+makeSubNode	include/uavcan_linux/helpers.hpp	/^static inline SubNodePtr makeSubNode(const std::vector<std::string>& iface_names,$/;"	f	namespace:uavcan_linux
+makeSubscriber	include/uavcan_linux/helpers.hpp	/^    SubscriberPtr<DataType> makeSubscriber(const typename uavcan::Subscriber<DataType>::Callback& cb)$/;"	f	class:uavcan_linux::NodeBase
+makeTimer	include/uavcan_linux/helpers.hpp	/^    TimerPtr makeTimer(uavcan::MonotonicDuration period, const typename uavcan::Timer::Callback& cb)$/;"	f	class:uavcan_linux::NodeBase
+makeTimer	include/uavcan_linux/helpers.hpp	/^    TimerPtr makeTimer(uavcan::MonotonicTime deadline, const typename uavcan::Timer::Callback& cb)$/;"	f	class:uavcan_linux::NodeBase
+makeUavcanFrame	include/uavcan_linux/socketcan.hpp	/^    static inline uavcan::CanFrame makeUavcanFrame(const ::can_frame& sockcan_frame)$/;"	f	class:uavcan_linux::SocketCanIface
+max_frames_in_socket_tx_queue_	include/uavcan_linux/socketcan.hpp	/^    const unsigned max_frames_in_socket_tx_queue_;$/;"	m	class:uavcan_linux::SocketCanIface
+mergeLists	include/uavcan_linux/system_utils.hpp	/^    static std::vector<std::string> mergeLists(const std::vector<std::string>& a, const std::vector<std::string>& b)$/;"	f	class:uavcan_linux::MachineIDReader
+modeToColoredString	apps/uavcan_monitor.cpp	/^    static std::pair<CLIColor, std::string> modeToColoredString(const std::uint8_t mode)$/;"	f	class:CLIColor::Monitor	file:
+mutex_	apps/test_multithreading.cpp	/^    std::mutex mutex_;                                                                  \/\/\/< Shared across all ifaces$/;"	m	class:VirtualCanDriver	file:
+mutex_	apps/test_multithreading.cpp	/^    std::mutex& mutex_;$/;"	m	class:VirtualCanIface	file:
+mutex_	apps/uavcan_nodetool.cpp	/^    mutable std::mutex mutex_;$/;"	m	class:__anon3::StdinLineReader	file:
+node_id	apps/test_file_server.cpp	/^    uavcan::NodeID node_id;$/;"	m	struct:__anon4::Options	file:
+node_id	apps/uavcan_dynamic_node_id_server.cpp	/^    uavcan::NodeID node_id;$/;"	m	struct:__anon2::CLIColor::Options	file:
+num_ifaces_	apps/test_multithreading.cpp	/^    const unsigned num_ifaces_;$/;"	m	class:VirtualCanDriver	file:
+num_last_events_	apps/uavcan_dynamic_node_id_server.cpp	/^    const unsigned num_last_events_;$/;"	m	class:__anon2::EventTracer	file:
+openSocket	include/uavcan_linux/socketcan.hpp	/^    static int openSocket(const std::string& iface_name)$/;"	f	class:uavcan_linux::SocketCanIface
+operator ()	apps/uavcan_dynamic_node_id_server.cpp	/^        std::size_t operator()(T t) const { return static_cast<std::size_t>(t); }$/;"	f	struct:__anon2::EventTracer::EnumKeyHash
+operator <	include/uavcan_linux/socketcan.hpp	/^        bool operator<(const TxItem& rhs) const$/;"	f	struct:uavcan_linux::SocketCanIface::TxItem
+order	include/uavcan_linux/socketcan.hpp	/^        std::uint64_t order = 0;$/;"	m	struct:uavcan_linux::SocketCanIface::TxItem
+parseOptions	apps/test_file_server.cpp	/^Options parseOptions(int argc, const char** argv)$/;"	f	namespace:__anon4
+parseOptions	apps/uavcan_dynamic_node_id_server.cpp	/^Options parseOptions(int argc, const char** argv)$/;"	f	class:__anon2::CLIColor	file:
+payload	apps/test_multithreading.cpp	/^        T payload;$/;"	m	struct:Queue::Item	file:
+peek	apps/test_multithreading.cpp	/^    T*       peek()       { return isEmpty() ? nullptr : &list_.get()->payload; }$/;"	f	class:Queue
+peek	apps/test_multithreading.cpp	/^    const T* peek() const { return isEmpty() ? nullptr : &list_.get()->payload; }$/;"	f	class:Queue
+pending_loopback_ids_	include/uavcan_linux/socketcan.hpp	/^    std::unordered_multiset<std::uint32_t> pending_loopback_ids_;   \/\/ TODO: Use pool allocator$/;"	m	class:uavcan_linux::SocketCanIface
+performGradualAdjustment	include/uavcan_linux/clock.hpp	/^    bool performGradualAdjustment(const uavcan::UtcDuration adjustment)$/;"	f	class:uavcan_linux::SystemClock
+performStepAdjustment	include/uavcan_linux/clock.hpp	/^    bool performStepAdjustment(const uavcan::UtcDuration adjustment)$/;"	f	class:uavcan_linux::SystemClock
+poll	include/uavcan_linux/socketcan.hpp	/^    void poll(bool read, bool write)$/;"	f	class:uavcan_linux::SocketCanIface
+pollRead	include/uavcan_linux/socketcan.hpp	/^    void pollRead()$/;"	f	class:uavcan_linux::SocketCanIface
+pollWrite	include/uavcan_linux/socketcan.hpp	/^    void pollWrite()$/;"	f	class:uavcan_linux::SocketCanIface
+pop	apps/test_multithreading.cpp	/^    void pop()$/;"	f	class:Queue
+printStatusLine	apps/uavcan_monitor.cpp	/^    void printStatusLine(const uavcan::NodeID nid, const uavcan::NodeStatusMonitor::NodeStatus& status)$/;"	f	class:CLIColor::Monitor	file:
+prioritized_tx_queue_	apps/test_multithreading.cpp	/^    uavcan::CanTxQueue prioritized_tx_queue_;$/;"	m	class:VirtualCanIface	file:
+private_adj_	include/uavcan_linux/clock.hpp	/^    uavcan::UtcDuration private_adj_;$/;"	m	class:uavcan_linux::SystemClock
+queue_	apps/uavcan_nodetool.cpp	/^    std::queue<std::string> queue_;$/;"	m	class:__anon3::StdinLineReader	file:
+read	include/uavcan_linux/socketcan.hpp	/^    int read(uavcan::CanFrame& frame, uavcan::UtcTime& ts_utc, bool& loopback) const$/;"	f	class:uavcan_linux::SocketCanIface
+read	include/uavcan_linux/system_utils.hpp	/^    MachineID read() const { return readAndGetLocation().first; }$/;"	f	class:uavcan_linux::MachineIDReader
+readAndGetLocation	include/uavcan_linux/system_utils.hpp	/^    std::pair<MachineID, std::string> readAndGetLocation() const$/;"	f	class:uavcan_linux::MachineIDReader
+redraw	apps/uavcan_dynamic_node_id_server.cpp	/^void redraw(const uavcan_linux::NodePtr& node,$/;"	f	class:__anon2::CLIColor	file:
+redraw	apps/uavcan_monitor.cpp	/^    void redraw(const uavcan::TimerEvent&)$/;"	f	class:CLIColor::Monitor	file:
+registerError	include/uavcan_linux/socketcan.hpp	/^    void registerError(SocketCanError e) { errors_[e]++; }$/;"	f	class:uavcan_linux::SocketCanIface
+response_	include/uavcan_linux/helpers.hpp	/^    typename DataType::Response response_;$/;"	m	class:uavcan_linux::BlockingServiceClient
+runForever	apps/test_dynamic_node_id_client.cpp	/^void runForever(const uavcan_linux::NodePtr& node)$/;"	f	namespace:__anon5
+runForever	apps/test_file_server.cpp	/^void runForever(const uavcan_linux::NodePtr& node)$/;"	f	namespace:__anon4
+runForever	apps/test_node.cpp	/^static void runForever(const uavcan_linux::NodePtr& node)$/;"	f	file:
+runForever	apps/test_node_comm.cpp	/^static void runForever(const uavcan_linux::NodePtr& node)$/;"	f	file:
+runForever	apps/test_time_sync.cpp	/^static void runForever(const uavcan_linux::NodePtr& node)$/;"	f	file:
+runForever	apps/uavcan_dynamic_node_id_server.cpp	/^void runForever(const uavcan_linux::NodePtr& node,$/;"	f	class:__anon2::CLIColor	file:
+runForever	apps/uavcan_monitor.cpp	/^static void runForever(const uavcan_linux::NodePtr& node)$/;"	f	class:CLIColor	file:
+runForever	apps/uavcan_nodetool.cpp	/^void runForever(const uavcan_linux::NodePtr& node)$/;"	f	namespace:__anon3
+runMainNode	apps/test_multithreading.cpp	/^static void runMainNode(const uavcan_linux::NodePtr& node)$/;"	f	file:
+runSubNode	apps/test_multithreading.cpp	/^static void runSubNode(const uavcan_linux::SubNodePtr& node)$/;"	f	file:
+rx_queue_	apps/test_multithreading.cpp	/^    Queue<RxItem> rx_queue_;$/;"	m	class:VirtualCanIface	file:
+rx_queue_	include/uavcan_linux/socketcan.hpp	/^    std::queue<RxItem> rx_queue_;                                   \/\/ TODO: Use pool allocator$/;"	m	class:uavcan_linux::SocketCanIface
+search_locations_	include/uavcan_linux/system_utils.hpp	/^    const std::vector<std::string> search_locations_;$/;"	m	class:uavcan_linux::MachineIDReader
+setGradualAdjustmentLimit	include/uavcan_linux/clock.hpp	/^    void setGradualAdjustmentLimit(uavcan::UtcDuration limit)$/;"	f	class:uavcan_linux::SystemClock
+setup	include/uavcan_linux/helpers.hpp	/^    void setup()$/;"	f	class:uavcan_linux::BlockingServiceClient
+signal	apps/test_multithreading.cpp	/^        void signal() { cv_.notify_all(); }$/;"	f	class:VirtualCanDriver::Event
+started_at_	apps/uavcan_dynamic_node_id_server.cpp	/^    const uavcan::MonotonicTime started_at_ = clock_.getMonotonic();$/;"	m	class:__anon2::EventTracer	file:
+status_registry_	apps/uavcan_monitor.cpp	/^    std::unordered_map<int, uavcan::protocol::NodeStatus> status_registry_;$/;"	m	class:CLIColor::Monitor	file:
+step_adj_cnt_	include/uavcan_linux/clock.hpp	/^    std::uint64_t step_adj_cnt_;$/;"	m	class:uavcan_linux::SystemClock
+storage_path	apps/uavcan_dynamic_node_id_server.cpp	/^    std::string storage_path;$/;"	m	struct:__anon2::CLIColor::Options	file:
+systime2str	apps/test_clock.cpp	/^static std::string systime2str(const std::chrono::system_clock::time_point& tp)$/;"	f	file:
+testDriver	apps/test_socket.cpp	/^static void testDriver(const std::vector<std::string>& iface_names)$/;"	f	file:
+testNonexistentIface	apps/test_socket.cpp	/^static void testNonexistentIface()$/;"	f	file:
+testQueue	apps/test_multithreading.cpp	/^static void testQueue()$/;"	f	file:
+testSocketFilters	apps/test_socket.cpp	/^static void testSocketFilters(const std::string& iface_name)$/;"	f	file:
+testSocketRxTx	apps/test_socket.cpp	/^static void testSocketRxTx(const std::string& iface_name)$/;"	f	file:
+thread_	apps/uavcan_nodetool.cpp	/^    std::thread thread_;$/;"	m	class:__anon3::StdinLineReader	file:
+time_since_startup	apps/uavcan_dynamic_node_id_server.cpp	/^        const uavcan::MonotonicDuration time_since_startup;$/;"	m	struct:__anon2::EventTracer::RecentEvent	file:
+timer_	apps/uavcan_monitor.cpp	/^    uavcan_linux::TimerPtr timer_;$/;"	m	class:CLIColor::Monitor	file:
+toString	apps/uavcan_dynamic_node_id_server.cpp	/^        uavcan::MakeString<81>::Type toString() const   \/\/ Heapless return$/;"	f	struct:__anon2::EventTracer::RecentEvent
+tryEmplace	apps/test_multithreading.cpp	/^    bool tryEmplace(Args... args)$/;"	f	class:Queue
+tryRead	include/uavcan_linux/system_utils.hpp	/^    bool tryRead(const std::string& location, MachineID& out_id) const$/;"	f	class:uavcan_linux::MachineIDReader
+tsMonoOffsetMs	apps/test_socket.cpp	/^static uavcan::MonotonicTime tsMonoOffsetMs(std::int64_t ms)$/;"	f	file:
+ts_mono	include/uavcan_linux/socketcan.hpp	/^        uavcan::MonotonicTime ts_mono;$/;"	m	struct:uavcan_linux::SocketCanIface::RxItem
+ts_utc	include/uavcan_linux/socketcan.hpp	/^        uavcan::UtcTime ts_utc;$/;"	m	struct:uavcan_linux::SocketCanIface::RxItem
+tx_frame_counter_	include/uavcan_linux/socketcan.hpp	/^    std::uint64_t tx_frame_counter_ = 0;        \/\/\/< Increments with every frame pushed into the TX queue$/;"	m	class:uavcan_linux::SocketCanIface
+tx_queue_	include/uavcan_linux/socketcan.hpp	/^    std::priority_queue<TxItem> tx_queue_;                          \/\/ TODO: Use pool allocator$/;"	m	class:uavcan_linux::SocketCanIface
+uavcan_linux	include/uavcan_linux/clock.hpp	/^namespace uavcan_linux$/;"	n
+uavcan_linux	include/uavcan_linux/exception.hpp	/^namespace uavcan_linux$/;"	n
+uavcan_linux	include/uavcan_linux/helpers.hpp	/^namespace uavcan_linux$/;"	n
+uavcan_linux	include/uavcan_linux/socketcan.hpp	/^namespace uavcan_linux$/;"	n
+uavcan_linux	include/uavcan_linux/system_utils.hpp	/^namespace uavcan_linux$/;"	n
+updateDownStatusFromPollResult	include/uavcan_linux/socketcan.hpp	/^        void updateDownStatusFromPollResult(const ::pollfd& pfd)$/;"	f	class:uavcan_linux::SocketCanDriver::IfaceWrapper
+utc_timestamp	apps/uavcan_dynamic_node_id_server.cpp	/^        const uavcan::UtcTime utc_timestamp;$/;"	m	struct:__anon2::EventTracer::RecentEvent	file:
+waitFor	apps/test_multithreading.cpp	/^        void waitFor(uavcan::MonotonicDuration duration)$/;"	f	class:VirtualCanDriver::Event
+wasInPendingLoopbackSet	include/uavcan_linux/socketcan.hpp	/^    bool wasInPendingLoopbackSet(const uavcan::CanFrame& frame)$/;"	f	class:uavcan_linux::SocketCanIface
+wasSuccessful	include/uavcan_linux/helpers.hpp	/^    bool wasSuccessful() const { return call_was_successful_; }$/;"	f	class:uavcan_linux::BlockingServiceClient
+worker	apps/uavcan_nodetool.cpp	/^    void worker()$/;"	f	class:__anon3::StdinLineReader	file:
+write	include/uavcan_linux/socketcan.hpp	/^    int write(const uavcan::CanFrame& frame) const$/;"	f	class:uavcan_linux::SocketCanIface
+~CLIColorizer	apps/uavcan_dynamic_node_id_server.cpp	/^    ~CLIColorizer()$/;"	f	class:__anon2::CLIColor::CLIColorizer
+~CLIColorizer	apps/uavcan_monitor.cpp	/^    ~CLIColorizer()$/;"	f	class:CLIColor::CLIColorizer
+~ITxQueueInjector	apps/test_multithreading.cpp	/^    virtual ~ITxQueueInjector() { }$/;"	f	class:ITxQueueInjector
+~SocketCanIface	include/uavcan_linux/socketcan.hpp	/^    virtual ~SocketCanIface()$/;"	f	class:uavcan_linux::SocketCanIface

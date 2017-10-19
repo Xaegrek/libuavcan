@@ -1,0 +1,483 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AF_CAN	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    AF_CAN = 29$/;"	kind:variable	line:42
+ALLOCATION	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    ALLOCATION = {}$/;"	kind:variable	line:76
+ArrayType	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class ArrayType(Type):$/;"	kind:class	line:105
+ArrayValue	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class ArrayValue(BaseValue, collections.MutableSequence):$/;"	kind:class	line:203
+Attribute	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class Attribute:$/;"	kind:class	line:274
+BaseValue	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class BaseValue(object):$/;"	kind:class	line:134
+CANSocket	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    class CANSocket(object):$/;"	kind:class	line:89
+CAN_EFF_FLAG	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^CAN_EFF_FLAG = 0x80000000$/;"	kind:variable	line:129
+CAN_EFF_MASK	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^CAN_EFF_MASK = 0x1FFFFFFF$/;"	kind:variable	line:130
+CAN_RAW	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    CAN_RAW = 1$/;"	kind:variable	line:39
+CAN_RAW_ERR_FILTER	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    CAN_RAW_ERR_FILTER      = 2     # set filter for error frames$/;"	kind:variable	line:50
+CAN_RAW_FD_FRAMES	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    CAN_RAW_FD_FRAMES       = 5     # allow CAN FD frames (default:off)$/;"	kind:variable	line:53
+CAN_RAW_FILTER	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    CAN_RAW_FILTER          = 1     # set 0 .. n can_filter(s)$/;"	kind:variable	line:49
+CAN_RAW_LOOPBACK	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    CAN_RAW_LOOPBACK        = 3     # local loopback (default:on)$/;"	kind:variable	line:51
+CAN_RAW_RECV_OWN_MSGS	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    CAN_RAW_RECV_OWN_MSGS   = 4     # receive my own msgs (default:off)$/;"	kind:variable	line:52
+CAST_MODE_SATURATED	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    CAST_MODE_SATURATED = 0$/;"	kind:variable	line:68
+CAST_MODE_TRUNCATED	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    CAST_MODE_TRUNCATED = 1$/;"	kind:variable	line:69
+CATEGORY_ARRAY	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    CATEGORY_ARRAY = 1$/;"	kind:variable	line:37
+CATEGORY_COMPOUND	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    CATEGORY_COMPOUND = 2$/;"	kind:variable	line:38
+CATEGORY_PRIMITIVE	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    CATEGORY_PRIMITIVE = 0$/;"	kind:variable	line:36
+CATEGORY_VOID	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    CATEGORY_VOID = 3$/;"	kind:variable	line:39
+CompoundType	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class CompoundType(Type):$/;"	kind:class	line:139
+CompoundValue	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class CompoundValue(BaseValue):$/;"	kind:class	line:326
+Constant	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class Constant(Attribute):$/;"	kind:class	line:304
+DATATYPES	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^DATATYPES = {}$/;"	kind:variable	line:48
+DEFAULT_OUTDIR	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^DEFAULT_OUTDIR = 'dsdlc_generated'$/;"	kind:variable	line:32
+DebugLogMessageMonitor	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^class DebugLogMessageMonitor(uavcan.node.Monitor):$/;"	kind:class	line:169
+DsdlCompilerException	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^class DsdlCompilerException(Exception):$/;"	kind:class	line:31
+DsdlException	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/common.py	/^class DsdlException(Exception):$/;"	kind:class	line:9
+DynamicNodeIDServer	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^class DynamicNodeIDServer(uavcan.node.Monitor):$/;"	kind:class	line:75
+ESCAPE_SUPPORTED	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^ESCAPE_SUPPORTED = {"NONE":None, "HTML":HTML, "LATEX":LATEX, "MAIL_HEADER":MAIL_HEADER}$/;"	kind:variable	line:270
+EvalPseudoSandbox	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class EvalPseudoSandbox:$/;"	kind:class	line:772
+Field	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class Field(Attribute):$/;"	kind:class	line:291
+FileGetInfoService	../libuavcan/dsdl_compiler/pyuavcan/uavcan/services/__init__.py	/^class FileGetInfoService(uavcan.node.Service):$/;"	kind:class	line:8
+FileReadService	../libuavcan/dsdl_compiler/pyuavcan/uavcan/services/__init__.py	/^class FileReadService(uavcan.node.Service):$/;"	kind:class	line:36
+Frame	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class Frame(object):$/;"	kind:class	line:437
+KIND_BOOLEAN	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    KIND_BOOLEAN = 0$/;"	kind:variable	line:63
+KIND_FLOAT	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    KIND_FLOAT = 3$/;"	kind:variable	line:66
+KIND_MESSAGE	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    KIND_MESSAGE = 1$/;"	kind:variable	line:169
+KIND_SERVICE	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    KIND_SERVICE = 0$/;"	kind:variable	line:168
+KIND_SIGNED_INT	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    KIND_SIGNED_INT = 2$/;"	kind:variable	line:65
+KIND_UNSIGNED_INT	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    KIND_UNSIGNED_INT = 1$/;"	kind:variable	line:64
+LOCAL_PYUAVCAN_DIR	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^LOCAL_PYUAVCAN_DIR = os.path.join(SCRIPT_DIR, 'pyuavcan')$/;"	kind:variable	line:16
+LOGGER_NAME	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    LOGGER_NAME = 'dsdl_parser'$/;"	kind:variable	line:328
+LoaderFile	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class LoaderFile:$/;"	kind:class	line:385
+LoaderString	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class LoaderString:$/;"	kind:class	line:368
+MASK64	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^    MASK64 = 0xFFFFFFFFFFFFFFFF$/;"	kind:variable	line:22
+MAX_FULL_TYPE_NAME_LEN	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^MAX_FULL_TYPE_NAME_LEN = 80$/;"	kind:variable	line:24
+MESSAGE_DATA_TYPE_ID_MAX	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^MESSAGE_DATA_TYPE_ID_MAX = 65535$/;"	kind:variable	line:27
+MODE_DYNAMIC	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    MODE_DYNAMIC = 1$/;"	kind:variable	line:114
+MODE_STATIC	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    MODE_STATIC = 0$/;"	kind:variable	line:113
+MODULE	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^MODULE = Module()$/;"	kind:variable	line:47
+Module	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^class Module(object):$/;"	kind:class	line:18
+Monitor	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^class Monitor(object):$/;"	kind:class	line:201
+NODE_INFO	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    NODE_INFO = {}$/;"	kind:variable	line:11
+NODE_STATUS	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    NODE_STATUS = {}$/;"	kind:variable	line:12
+NODE_STATUS_INVERVAL	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^NODE_STATUS_INVERVAL = 0.5$/;"	kind:variable	line:18
+NODE_TIMESTAMP	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    NODE_TIMESTAMP = collections.defaultdict(float)$/;"	kind:variable	line:13
+Namespace	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^class Namespace(object):$/;"	kind:class	line:22
+Node	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^class Node(object):$/;"	kind:class	line:21
+NodeStatusMonitor	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^class NodeStatusMonitor(uavcan.node.Monitor):$/;"	kind:class	line:10
+OUTPUT_FILE_EXTENSION	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^OUTPUT_FILE_EXTENSION = 'hpp'$/;"	kind:variable	line:25
+OUTPUT_FILE_PERMISSIONS	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^OUTPUT_FILE_PERMISSIONS = 0o444  # Read only for all$/;"	kind:variable	line:26
+POLY	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^    POLY = 0x42F0E1EBA9EA3693$/;"	kind:variable	line:23
+Parser	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class Parser(object):$/;"	kind:class	line:432
+Parser	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class Parser:$/;"	kind:class	line:324
+PrimitiveType	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class PrimitiveType(Type):$/;"	kind:class	line:54
+PrimitiveValue	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class PrimitiveValue(BaseValue):$/;"	kind:class	line:153
+QUERY	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    QUERY = ""$/;"	kind:variable	line:77
+RUNNING_FROM_SRC_DIR	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^RUNNING_FROM_SRC_DIR = os.path.isdir(LOCAL_PYUAVCAN_DIR)$/;"	kind:variable	line:17
+Renderer	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class Renderer(object):$/;"	kind:class	line:1057
+SCRIPT_DIR	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:15
+SERVICE_DATA_TYPE_ID_MAX	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^SERVICE_DATA_TYPE_ID_MAX = 255$/;"	kind:variable	line:26
+SLCAN	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^class SLCAN(object):$/;"	kind:class	line:191
+SOL_CAN_BASE	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    SOL_CAN_BASE            = 100$/;"	kind:variable	line:47
+SOL_CAN_RAW	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    SOL_CAN_RAW             = SOL_CAN_BASE + CAN_RAW$/;"	kind:variable	line:48
+SO_TIMESTAMP	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    SO_TIMESTAMP = 29$/;"	kind:variable	line:43
+Service	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^class Service(Monitor):$/;"	kind:class	line:214
+Signature	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^class Signature:$/;"	kind:class	line:18
+SocketCAN	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^class SocketCAN(object):$/;"	kind:class	line:133
+TEMPLATE_FILENAME	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^TEMPLATE_FILENAME = os.path.join(os.path.dirname(__file__), 'data_type_template.tmpl')$/;"	kind:variable	line:27
+TIMEOUT	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    TIMEOUT = 30.0$/;"	kind:variable	line:14
+TYPENAMES	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^TYPENAMES = {}$/;"	kind:variable	line:49
+Template	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class Template(TemplateBase):$/;"	kind:class	line:1149
+TemplateBase	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class TemplateBase:$/;"	kind:class	line:989
+TemplateException	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class TemplateException(Exception):$/;"	kind:class	line:332
+TemplateIncludeError	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class TemplateIncludeError(TemplateParseError):$/;"	kind:class	line:357
+TemplateParseError	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class TemplateParseError(TemplateException):$/;"	kind:class	line:336
+TemplateRenderError	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class TemplateRenderError(TemplateException):$/;"	kind:class	line:361
+TemplateSyntaxError	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class TemplateSyntaxError(TemplateParseError, SyntaxError):$/;"	kind:class	line:353
+TestArrayBasic	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestArrayBasic(unittest.TestCase):$/;"	kind:class	line:346
+TestBEFromLEBits	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestBEFromLEBits(unittest.TestCase):$/;"	kind:class	line:90
+TestBitsFromBytes	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestBitsFromBytes(unittest.TestCase):$/;"	kind:class	line:6
+TestBytesFromBits	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestBytesFromBits(unittest.TestCase):$/;"	kind:class	line:39
+TestBytesFromCRC64	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	/^class TestBytesFromCRC64(unittest.TestCase):$/;"	kind:class	line:19
+TestCRC16FromBytes	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	/^class TestCRC16FromBytes(unittest.TestCase):$/;"	kind:class	line:6
+TestCast	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestCast(unittest.TestCase):$/;"	kind:class	line:158
+TestComputeSignature	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^class TestComputeSignature(unittest.TestCase):$/;"	kind:class	line:28
+TestLEFromBEBits	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestLEFromBEBits(unittest.TestCase):$/;"	kind:class	line:124
+TestMessageUnion	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestMessageUnion(unittest.TestCase):$/;"	kind:class	line:501
+TestSignature	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^class TestSignature(unittest.TestCase):$/;"	kind:class	line:5
+TestVoid	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^class TestVoid(unittest.TestCase):$/;"	kind:class	line:449
+Transfer	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class Transfer(object):$/;"	kind:class	line:462
+TransferManager	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class TransferManager(object):$/;"	kind:class	line:653
+Type	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class Type:$/;"	kind:class	line:29
+Void	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^class Void(object):$/;"	kind:class	line:123
+VoidType	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^class VoidType(Type):$/;"	kind:class	line:255
+__all__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^__all__ = ['run', 'logger', 'DsdlCompilerException']$/;"	kind:variable	line:29
+__all__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^__all__ = ["dsdl", "transport", "load_dsdl", "DATATYPES", "TYPENAMES"]$/;"	kind:variable	line:99
+__all__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/__init__.py	/^__all__ = ['Parser', 'parse_namespaces',$/;"	kind:variable	line:16
+__author__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^__author__   = "Roland Koebler <rk at simple-is-better dot org>"$/;"	kind:variable	line:172
+__call__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __call__(self, **override):$/;"	kind:member	line:1018
+__delitem__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __delitem__(self, idx):$/;"	kind:member	line:245
+__getattr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __getattr__(self, attr):$/;"	kind:member	line:382
+__getitem__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __getitem__(self, idx):$/;"	kind:member	line:230
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self):$/;"	kind:member	line:840
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self, allowed_path=None, encoding='utf-8'):$/;"	kind:member	line:393
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self, encoding='utf-8'):$/;"	kind:member	line:373
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self, err, errpos):$/;"	kind:member	line:338
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self, evalfunc, escapefunc):$/;"	kind:member	line:1063
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self, loadfunc=None, testexpr=None, escape=HTML):$/;"	kind:member	line:510
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self, parsetree, renderfunc, data=None):$/;"	kind:member	line:996
+__init__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __init__(self, string=None,filename=None,parsetree=None, encoding='utf-8', data=None, escape=HTML,$/;"	kind:member	line:1161
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^    def __init__(self):$/;"	kind:member	line:25
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^        def __init__(self, fd):$/;"	kind:member	line:90
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def __init__(self, device, baudrate=1000000):$/;"	kind:member	line:192
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def __init__(self, interface):$/;"	kind:member	line:134
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/common.py	/^    def __init__(self, text, file=None, line=None):$/;"	kind:member	line:16
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, bitlen):$/;"	kind:member	line:261
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, full_name, category):$/;"	kind:member	line:41
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, full_name, kind, source_file, default_dtid, source_text):$/;"	kind:member	line:171
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, kind, bitlen, cast_mode):$/;"	kind:member	line:71
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, search_dirs):$/;"	kind:member	line:330
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, type, name):  # @ReservedAssignment$/;"	kind:member	line:281
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, type, name, init_expression, value):  # @ReservedAssignment$/;"	kind:member	line:312
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __init__(self, value_type, mode, max_size):$/;"	kind:member	line:116
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^    def __init__(self, extend_from=None):$/;"	kind:member	line:25
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:16
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:79
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:215
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def __init__(self, handlers, node_id=127):$/;"	kind:member	line:22
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def __init__(self, payload, transfer, node, *args, **kwargs):$/;"	kind:member	line:202
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/services/__init__.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:37
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/services/__init__.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:9
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __init__(self):$/;"	kind:member	line:654
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __init__(self, bitlen):$/;"	kind:member	line:124
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __init__(self, message_id, bytes):$/;"	kind:member	line:438
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __init__(self, transfer_id=0, source_node_id=0, data_type_id=0,$/;"	kind:member	line:463
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __init__(self, uavcan_type, *args, **kwargs):$/;"	kind:member	line:135
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __init__(self, uavcan_type, mode=None, tao=False, *args, **kwargs):$/;"	kind:member	line:327
+__init__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __init__(self, uavcan_type, tao=False, *args, **kwargs):$/;"	kind:member	line:204
+__init__.py	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	1;"	kind:file	line:1
+__init__.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	1;"	kind:file	line:1
+__init__.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/__init__.py	1;"	kind:file	line:1
+__init__.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	1;"	kind:file	line:1
+__init__.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/services/__init__.py	1;"	kind:file	line:1
+__len__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __len__(self):$/;"	kind:member	line:248
+__repr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    __repr__ = __str__$/;"	kind:variable	line:288
+__repr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    __repr__ = __str__$/;"	kind:variable	line:51
+__repr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __repr__(self):$/;"	kind:member	line:154
+__repr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __repr__(self):$/;"	kind:member	line:223
+__repr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __repr__(self):$/;"	kind:member	line:372
+__repr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __repr__(self):$/;"	kind:member	line:492
+__setattr__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __setattr__(self, attr, value):$/;"	kind:member	line:399
+__setitem__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __setitem__(self, idx, value):$/;"	kind:member	line:236
+__slots__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    __slots__ = []$/;"	kind:variable	line:1054
+__str__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __str__(self):$/;"	kind:member	line:1037
+__str__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __str__(self):$/;"	kind:member	line:347
+__str__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/common.py	/^    def __str__(self):$/;"	kind:member	line:21
+__str__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __str__(self):$/;"	kind:member	line:285
+__str__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def __str__(self):$/;"	kind:member	line:45
+__str__	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def __str__(self):$/;"	kind:member	line:227
+__unicode__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def __unicode__(self):$/;"	kind:member	line:1034
+__version__	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^__version__ = "0.3.0"$/;"	kind:variable	line:171
+_block_end	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _block_end     = ")-->"$/;"	kind:variable	line:448
+_block_start	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _block_start   = "<!--("$/;"	kind:variable	line:447
+_comment_end	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _comment_end   = "!#"$/;"	kind:variable	line:442
+_comment_start	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _comment_start = "#!"$/;"	kind:variable	line:441
+_doctest	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def _doctest():$/;"	kind:function	line:1215
+_dontescape	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^class _dontescape(unicode):$/;"	kind:class	line:1044
+_e	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _e = re.escape(_block_end)$/;"	kind:variable	line:480
+_errpos	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def _errpos(self, fpos):$/;"	kind:member	line:555
+_eval	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def _eval(self, expr, data):$/;"	kind:member	line:1076
+_execute	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def _execute(self):$/;"	kind:member	line:207
+_execute	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def _execute(self):$/;"	kind:member	line:221
+_fields_	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^        _fields_ = [$/;"	kind:variable	line:66
+_fields_	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^        _fields_ = [$/;"	kind:variable	line:82
+_full_typename_and_dtid_from_filename	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _full_typename_and_dtid_from_filename(self, filename):$/;"	kind:member	line:348
+_get_bytes_async	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def _get_bytes_async(self):$/;"	kind:member	line:205
+_get_bytes_sync	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def _get_bytes_sync(self):$/;"	kind:member	line:202
+_ioloop_event_handler	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def _ioloop_event_handler(self, fd, events, callback=None):$/;"	kind:member	line:208
+_locate_compound_type_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _locate_compound_type_definition(self, referencing_filename, typename):$/;"	kind:member	line:365
+_make_constant	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _make_constant(self, attrtype, name, init_expression):$/;"	kind:member	line:476
+_namespace_from_filename	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _namespace_from_filename(self, filename):$/;"	kind:member	line:334
+_namespaces	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^    def _namespaces(self):$/;"	kind:member	line:42
+_next_transfer_id	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def _next_transfer_id(self, key):$/;"	kind:member	line:90
+_parse	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def _parse(self, template, fpos=0):$/;"	kind:member	line:599
+_parse	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def _parse(self, message):$/;"	kind:member	line:211
+_parse_array_type	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _parse_array_type(self, filename, value_typedef, size_spec, cast_mode):$/;"	kind:member	line:398
+_parse_compound_type	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _parse_compound_type(self, filename, typedef):$/;"	kind:member	line:443
+_parse_line	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _parse_line(self, filename, tokens):$/;"	kind:member	line:497
+_parse_primitive_type	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _parse_primitive_type(self, filename, base_name, bitlen, cast_mode):$/;"	kind:member	line:418
+_parse_sub	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def _parse_sub(self, parsetree, text, fpos=0):$/;"	kind:member	line:567
+_parse_type	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _parse_type(self, filename, typedef, cast_mode):$/;"	kind:member	line:451
+_parse_void_type	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _parse_void_type(self, filename, bitlen):$/;"	kind:member	line:394
+_path	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^    def _path(self, attrpath):$/;"	kind:member	line:28
+_reBlock	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _reBlock = re.compile(_strBlock, re.X|re.M)$/;"	kind:variable	line:500
+_reComment	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _reComment = re.compile(_strComment, re.M)$/;"	kind:variable	line:455
+_reForParam	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _reForParam  = re.compile(_strForParam)$/;"	kind:variable	line:504
+_reSubstitution	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _reSubstitution = re.compile(_strSubstitution, re.X|re.M)$/;"	kind:variable	line:467
+_read	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def _read(self, fd, events, callback=None):$/;"	kind:member	line:138
+_recv	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def _recv(self, callback=None):$/;"	kind:member	line:167
+_recv	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def _recv(self, callback=None):$/;"	kind:member	line:229
+_recv_frame	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def _recv_frame(self, dev, message):$/;"	kind:member	line:34
+_s	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _s = re.escape(_block_start)$/;"	kind:variable	line:479
+_sub_end	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _sub_end       = "!$"$/;"	kind:variable	line:444
+_sub_start	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _sub_start     = "$!"$/;"	kind:variable	line:443
+_subesc_end	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _subesc_end    = "!@"$/;"	kind:variable	line:446
+_subesc_start	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    _subesc_start  = "@!"$/;"	kind:variable	line:445
+_testexpr	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def _testexpr(self, expr,  fpos=0):$/;"	kind:member	line:560
+_tokenize	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def _tokenize(self, text):$/;"	kind:member	line:521
+add	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^    def add(self, data_bytes):$/;"	kind:member	line:34
+add_to_ioloop	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def add_to_ioloop(self, ioloop, callback=None):$/;"	kind:member	line:170
+add_to_ioloop	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def add_to_ioloop(self, ioloop, callback=None):$/;"	kind:member	line:271
+argparser	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^argparser = argparse.ArgumentParser(description=DESCRIPTION)$/;"	kind:variable	line:41
+args	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^args = argparser.parse_args()$/;"	kind:variable	line:48
+args	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^args = dict($/;"	kind:variable	line:5
+args	../libuavcan/dsdl_compiler/setup.py	/^args = dict($/;"	kind:variable	line:5
+author	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    author='Pavel Kirienko',$/;"	kind:variable	line:10
+author	../libuavcan/dsdl_compiler/setup.py	/^    author='Pavel Kirienko',$/;"	kind:variable	line:13
+author_email	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    author_email='pavel.kirienko@gmail.com',$/;"	kind:variable	line:11
+author_email	../libuavcan/dsdl_compiler/setup.py	/^    author_email='pavel.kirienko@gmail.com',$/;"	kind:variable	line:14
+be_from_le_bits	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def be_from_le_bits(s, bitlen):$/;"	kind:function	line:26
+bitlen_to_bytelen	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def bitlen_to_bytelen(x):$/;"	kind:function	line:623
+bits_from_bytes	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def bits_from_bytes(s):$/;"	kind:function	line:18
+bytes_from_bits	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def bytes_from_bits(s):$/;"	kind:function	line:22
+bytes_from_crc64	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/common.py	/^def bytes_from_crc64(crc64):$/;"	kind:function	line:64
+can_frame	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    class can_frame(ctypes.Structure):$/;"	kind:class	line:73
+cast	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def cast(value, dtype):$/;"	kind:function	line:103
+check_fields	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def check_fields(fields):$/;"	kind:function	line:687
+classifiers	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    classifiers=[$/;"	kind:variable	line:14
+close	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^        def close(self):$/;"	kind:member	line:110
+close	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def close(self, callback=None):$/;"	kind:member	line:179
+close	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def close(self, callback=None):$/;"	kind:member	line:294
+common.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/common.py	1;"	kind:file	line:1
+compile	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def compile(self, expr):$/;"	kind:member	line:857
+compute_max_bitlen	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^        def compute_max_bitlen(flds, union):$/;"	kind:function	line:177
+compute_signature	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^def compute_signature(data):$/;"	kind:function	line:56
+configure_logging	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^def configure_logging(verbosity):$/;"	kind:function	line:23
+crc16_from_bytes	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/common.py	/^def crc16_from_bytes(bytes, initial=0xFFFF):$/;"	kind:function	line:37
+create_instance	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^            def create_instance(*args, **kwargs):$/;"	kind:function	line:81
+create_instance_closure	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^        def create_instance_closure(closure_type):$/;"	kind:function	line:80
+custom_type_factory	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^        def custom_type_factory(*args, **kwargs):$/;"	kind:function	line:385
+custom_type_factory	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^        def custom_type_factory(*args, **kwargs):$/;"	kind:function	line:477
+custom_type_factory	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^        def custom_type_factory(*args, **kwargs):$/;"	kind:function	line:533
+decode	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def decode(self, encoding="utf-8"):$/;"	kind:member	line:321
+description	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    description='UAVCAN for Python',$/;"	kind:variable	line:8
+description	../libuavcan/dsdl_compiler/setup.py	/^    description='UAVCAN DSDL compiler for libuavcan',$/;"	kind:variable	line:8
+detect_include	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^        def detect_include(t):$/;"	kind:function	line:174
+dictkeyclean	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def dictkeyclean(d):$/;"	kind:function	line:242
+die	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def die(text):$/;"	kind:function	line:88
+die	../libuavcan/dsdl_compiler/libuavcan_dsdlc	/^def die(text):$/;"	kind:function	line:28
+driver.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	1;"	kind:file	line:1
+dummy	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def dummy(*_, **__):$/;"	kind:function	line:252
+dummy_raise	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def dummy_raise(exception, value):$/;"	kind:function	line:257
+encode	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def encode(self, value):$/;"	kind:member	line:315
+end_of_transfer	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def end_of_transfer(self):$/;"	kind:member	line:454
+enforce	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def enforce(cond, fmt, *args):$/;"	kind:function	line:618
+ensure_unique_dtid	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def ensure_unique_dtid(t, filename):$/;"	kind:function	line:740
+enum_last_value	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^        def enum_last_value(iterable, start=0):$/;"	kind:function	line:297
+error	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def error(fmt, *args):$/;"	kind:function	line:614
+escape	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def escape(s, format=HTML):$/;"	kind:function	line:272
+eval	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def eval(self, expr, locals):$/;"	kind:member	line:876
+evaluate_expression	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def evaluate_expression(expression):$/;"	kind:function	line:627
+expand	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^    def expand(**args):$/;"	kind:function	line:293
+f16_from_f32	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def f16_from_f32(float32):$/;"	kind:function	line:55
+f32_from_f16	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def f32_from_f16(float16):$/;"	kind:function	line:88
+f_default	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def f_default(self, expr, default=None):$/;"	kind:member	line:942
+f_escape	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def f_escape(self, s, format="HTML"):$/;"	kind:member	line:979
+f_exists	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def f_exists(self, varname):$/;"	kind:member	line:928
+f_import	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def f_import(self, name, *_, **__):$/;"	kind:member	line:888
+f_setvar	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def f_setvar(self, name, expr):$/;"	kind:member	line:969
+fields_includes	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^    def fields_includes(fields):$/;"	kind:function	line:173
+fileno	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^        def fileno(self):$/;"	kind:member	line:107
+format_bits	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def format_bits(s):$/;"	kind:function	line:46
+from_bytes	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def from_bytes(self, value):$/;"	kind:member	line:306
+from_frames	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def from_frames(self, frames):$/;"	kind:member	line:572
+generate_one_type	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def generate_one_type(template_expander, t):$/;"	kind:function	line:166
+get_data_type_signature	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_data_type_signature(self):$/;"	kind:member	line:135
+get_data_type_signature	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_data_type_signature(self):$/;"	kind:member	line:237
+get_data_type_signature	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_data_type_signature(self):$/;"	kind:member	line:48
+get_dsdl_signature	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_dsdl_signature(self):$/;"	kind:member	line:226
+get_dsdl_signature_source_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_dsdl_signature_source_definition(self):$/;"	kind:member	line:202
+get_float_range	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/type_limits.py	/^def get_float_range(bitlen):$/;"	kind:function	line:19
+get_max_bitlen	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_max_bitlen(self):$/;"	kind:member	line:100
+get_max_bitlen	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_max_bitlen(self):$/;"	kind:member	line:127
+get_max_bitlen	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_max_bitlen(self):$/;"	kind:member	line:269
+get_normalized_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_normalized_definition(self):$/;"	kind:member	line:122
+get_normalized_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_normalized_definition(self):$/;"	kind:member	line:233
+get_normalized_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_normalized_definition(self):$/;"	kind:member	line:265
+get_normalized_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_normalized_definition(self):$/;"	kind:member	line:297
+get_normalized_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_normalized_definition(self):$/;"	kind:member	line:320
+get_normalized_definition	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def get_normalized_definition(self):$/;"	kind:member	line:83
+get_signed_integer_range	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/type_limits.py	/^def get_signed_integer_range(bitlen):$/;"	kind:function	line:15
+get_socket	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def get_socket(ifname):$/;"	kind:function	line:113
+get_socket	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def get_socket(ifname):$/;"	kind:function	line:27
+get_unsigned_integer_range	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/type_limits.py	/^def get_unsigned_integer_range(bitlen):$/;"	kind:function	line:10
+get_value	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^    def get_value(self):$/;"	kind:member	line:51
+inject_constant_info	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^    def inject_constant_info(constants):$/;"	kind:function	line:215
+inject_cpp_types	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^    def inject_cpp_types(attributes):$/;"	kind:function	line:190
+insert	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def insert(self, idx, value):$/;"	kind:member	line:254
+is_response_to	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def is_response_to(self, transfer):$/;"	kind:member	line:641
+key	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def key(self):$/;"	kind:member	line:638
+keywords	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    keywords=''$/;"	kind:variable	line:21
+le_from_be_bits	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def le_from_be_bits(s, bitlen):$/;"	kind:function	line:36
+libc	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    libc = ctypes.CDLL(ctypes.util.find_library("c"))$/;"	kind:variable	line:36
+libuavcan_dsdlc	../libuavcan/dsdl_compiler/libuavcan_dsdlc	1;"	kind:file	line:1
+license	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    license='MIT',$/;"	kind:variable	line:13
+license	../libuavcan/dsdl_compiler/setup.py	/^    license='MIT'$/;"	kind:variable	line:16
+listen	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def listen(self, device, baudrate=1000000, io_loop=None):$/;"	kind:member	line:95
+load	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def load(self, filename):$/;"	kind:member	line:407
+load	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def load(self, s):$/;"	kind:member	line:376
+load_dsdl	../libuavcan/dsdl_compiler/pyuavcan/uavcan/__init__.py	/^def load_dsdl(paths):$/;"	kind:function	line:52
+locate_namespace_directory	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^        def locate_namespace_directory(namespace):$/;"	kind:function	line:366
+logger	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^logger = logging.getLogger(__name__)$/;"	kind:variable	line:34
+long	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    long = int$/;"	kind:variable	line:199
+long	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    long = int  # @ReservedAssignment$/;"	kind:variable	line:22
+make_template_expander	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def make_template_expander(filename):$/;"	kind:function	line:245
+makedirs	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def makedirs(path):$/;"	kind:function	line:78
+message_id	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def message_id(self):$/;"	kind:member	line:499
+message_id	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def message_id(self, value):$/;"	kind:member	line:526
+mydummy	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def mydummy(*_, **__):$/;"	kind:function	line:262
+name	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    name='uavcan',$/;"	kind:variable	line:6
+name	../libuavcan/dsdl_compiler/setup.py	/^    name='libuavcan_dsdl_compiler',$/;"	kind:variable	line:6
+new_item	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def new_item(self):$/;"	kind:member	line:251
+node.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	1;"	kind:file	line:1
+on_message	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    def on_message(self, message):$/;"	kind:member	line:170
+on_message	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    def on_message(self, message):$/;"	kind:member	line:20
+on_message	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    def on_message(self, message):$/;"	kind:member	line:83
+on_message	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def on_message(self, message):$/;"	kind:member	line:210
+on_nodeinfo_response	../libuavcan/dsdl_compiler/pyuavcan/uavcan/monitors/__init__.py	/^    def on_nodeinfo_response(self, response, transfer):$/;"	kind:member	line:38
+on_request	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def on_request(self):$/;"	kind:member	line:242
+on_request	../libuavcan/dsdl_compiler/pyuavcan/uavcan/services/__init__.py	/^    def on_request(self):$/;"	kind:member	line:13
+on_request	../libuavcan/dsdl_compiler/pyuavcan/uavcan/services/__init__.py	/^    def on_request(self):$/;"	kind:member	line:41
+on_walk_error	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^        def on_walk_error(directory, ex):$/;"	kind:function	line:730
+open	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def open(self, callback=None):$/;"	kind:member	line:176
+open	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def open(self, callback=None):$/;"	kind:member	line:278
+pack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def pack(self):$/;"	kind:member	line:130
+pack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def pack(self):$/;"	kind:member	line:146
+pack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def pack(self):$/;"	kind:member	line:291
+pack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def pack(self):$/;"	kind:member	line:427
+package_data	../libuavcan/dsdl_compiler/setup.py	/^    package_data={'libuavcan_dsdl_compiler': ['data_type_template.tmpl']},$/;"	kind:variable	line:10
+packages	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    packages=['uavcan', 'uavcan.dsdl', 'uavcan.services', 'uavcan.monitors'],$/;"	kind:variable	line:9
+packages	../libuavcan/dsdl_compiler/setup.py	/^    packages=['libuavcan_dsdl_compiler'],$/;"	kind:variable	line:9
+parse	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def parse(self, template):$/;"	kind:member	line:541
+parse	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def parse(self, filename):$/;"	kind:member	line:600
+parse_namespaces	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def parse_namespaces(source_dirs, search_dirs=None):$/;"	kind:function	line:702
+parse_source	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def parse_source(self, filename, source_text):$/;"	kind:member	line:528
+parsed	../dsdl/test.py	/^parsed = dsdl.parse_namespaces(['uavcan']);$/;"	kind:variable	line:10
+parser.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	1;"	kind:file	line:1
+pretty_filename	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def pretty_filename(filename):$/;"	kind:function	line:66
+pretty_filename	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/common.py	/^def pretty_filename(filename):$/;"	kind:function	line:30
+pyratemp.py	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	1;"	kind:file	line:1
+receive_frame	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def receive_frame(self, frame):$/;"	kind:member	line:658
+recv	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^        def recv(self, bufsize, flags=None):$/;"	kind:member	line:93
+register	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def register(self, name, obj):$/;"	kind:member	line:850
+remove_inactive_transfers	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def remove_inactive_transfers(self, timeout=1.0):$/;"	kind:member	line:672
+render	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    def render(self, parsetree, data):$/;"	kind:member	line:1084
+requires	../libuavcan/dsdl_compiler/setup.py	/^    requires=['uavcan'],$/;"	kind:variable	line:12
+run	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def run(source_dirs, include_dirs, output_dir):$/;"	kind:function	line:36
+run_generator	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def run_generator(types, dest_dir):$/;"	kind:function	line:99
+run_parser	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def run_parser(source_dirs, search_dirs):$/;"	kind:function	line:91
+s	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	/^    s = Signature()$/;"	kind:variable	line:68
+safe_builtins	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    safe_builtins = {$/;"	kind:variable	line:800
+scol	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def scol(string, i):$/;"	kind:function	line:218
+scripts	../libuavcan/dsdl_compiler/setup.py	/^    scripts=['libuavcan_dsdlc'],$/;"	kind:variable	line:11
+send	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^        def send(self, data, flags=None):$/;"	kind:member	line:100
+send	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def send(self, message_id, message, extended=False):$/;"	kind:member	line:182
+send	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    def send(self, message_id, message, extended=False):$/;"	kind:member	line:299
+send_message	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def send_message(self, payload):$/;"	kind:member	line:187
+send_node_status	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def send_node_status(self):$/;"	kind:member	line:132
+send_request	../libuavcan/dsdl_compiler/pyuavcan/uavcan/node.py	/^    def send_request(self, payload, dest_node_id=None, callback=None):$/;"	kind:member	line:163
+serial	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    serial = None$/;"	kind:variable	line:18
+setUp	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def setUp(self):$/;"	kind:member	line:347
+setUp	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def setUp(self):$/;"	kind:member	line:450
+setUp	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def setUp(self):$/;"	kind:member	line:502
+setup.py	../libuavcan/dsdl_compiler/pyuavcan/setup.py	1;"	kind:file	line:1
+setup.py	../libuavcan/dsdl_compiler/setup.py	1;"	kind:file	line:1
+signature.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/signature.py	1;"	kind:file	line:1
+sindex	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def sindex(string, row, col):$/;"	kind:function	line:226
+sockaddr_can	../libuavcan/dsdl_compiler/pyuavcan/uavcan/driver.py	/^    class sockaddr_can(ctypes.Structure):$/;"	kind:class	line:55
+srow	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^def srow(string, i):$/;"	kind:function	line:210
+start_of_transfer	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def start_of_transfer(self):$/;"	kind:member	line:458
+str	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^    str = unicode$/;"	kind:variable	line:21
+str	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    str = unicode  # @ReservedAssignment$/;"	kind:variable	line:16
+test.py	../dsdl/test.py	1;"	kind:file	line:1
+test_add	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^    def test_add(self):$/;"	kind:member	line:6
+test_add_bytearray	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^    def test_add_bytearray(self):$/;"	kind:member	line:22
+test_add_bytes	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^    def test_add_bytes(self):$/;"	kind:member	line:17
+test_add_multiple	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^    def test_add_multiple(self):$/;"	kind:member	line:11
+test_bytearray	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	/^    def test_bytearray(self):$/;"	kind:member	line:13
+test_bytearray	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^    def test_bytearray(self):$/;"	kind:member	line:37
+test_bytes	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	/^    def test_bytes(self):$/;"	kind:member	line:10
+test_bytes	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^    def test_bytes(self):$/;"	kind:member	line:33
+test_check_val	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	/^    def test_check_val(self):$/;"	kind:member	line:24
+test_common.py	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	1;"	kind:file	line:1
+test_driver.py	../libuavcan/dsdl_compiler/pyuavcan/test/test_driver.py	1;"	kind:file	line:1
+test_empty	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_empty(self):$/;"	kind:member	line:40
+test_empty	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_empty(self):$/;"	kind:member	line:7
+test_float16_saturated	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_float16_saturated(self):$/;"	kind:member	line:336
+test_float16_truncated	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_float16_truncated(self):$/;"	kind:member	line:333
+test_float32_saturated	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_float32_saturated(self):$/;"	kind:member	line:342
+test_float32_truncated	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_float32_truncated(self):$/;"	kind:member	line:339
+test_multiple_bytes	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_multiple_bytes(self):$/;"	kind:member	line:102
+test_multiple_bytes	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_multiple_bytes(self):$/;"	kind:member	line:136
+test_multiple_bytes	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_multiple_bytes(self):$/;"	kind:member	line:27
+test_multiple_bytes	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_multiple_bytes(self):$/;"	kind:member	line:79
+test_node.py	../libuavcan/dsdl_compiler/pyuavcan/test/test_node.py	1;"	kind:file	line:1
+test_parser.py	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_parser.py	1;"	kind:file	line:1
+test_partial_byte	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_partial_byte(self):$/;"	kind:member	line:125
+test_partial_byte	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_partial_byte(self):$/;"	kind:member	line:44
+test_partial_byte	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_partial_byte(self):$/;"	kind:member	line:91
+test_representation	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_representation(self):$/;"	kind:member	line:419
+test_representation	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_representation(self):$/;"	kind:member	line:486
+test_representation	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_representation(self):$/;"	kind:member	line:543
+test_signature.py	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	1;"	kind:file	line:1
+test_signed_saturated_33bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_signed_saturated_33bit(self):$/;"	kind:member	line:303
+test_signed_saturated_4bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_signed_saturated_4bit(self):$/;"	kind:member	line:287
+test_signed_saturated_64bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_signed_saturated_64bit(self):$/;"	kind:member	line:317
+test_single_byte	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_single_byte(self):$/;"	kind:member	line:11
+test_single_byte	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_single_byte(self):$/;"	kind:member	line:131
+test_single_byte	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_single_byte(self):$/;"	kind:member	line:69
+test_single_byte	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_single_byte(self):$/;"	kind:member	line:97
+test_size	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_size(self):$/;"	kind:member	line:413
+test_size	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_size(self):$/;"	kind:member	line:482
+test_size	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_size(self):$/;"	kind:member	line:538
+test_str	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	/^    def test_str(self):$/;"	kind:member	line:7
+test_str	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_signature.py	/^    def test_str(self):$/;"	kind:member	line:29
+test_transport.py	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	1;"	kind:file	line:1
+test_truncated_1bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_truncated_1bit(self):$/;"	kind:member	line:159
+test_truncated_33bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_truncated_33bit(self):$/;"	kind:member	line:193
+test_truncated_4bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_truncated_4bit(self):$/;"	kind:member	line:177
+test_truncated_64bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_truncated_64bit(self):$/;"	kind:member	line:207
+test_unsigned_saturated_1bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_unsigned_saturated_1bit(self):$/;"	kind:member	line:223
+test_unsigned_saturated_33bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_unsigned_saturated_33bit(self):$/;"	kind:member	line:257
+test_unsigned_saturated_4bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_unsigned_saturated_4bit(self):$/;"	kind:member	line:241
+test_unsigned_saturated_64bit	../libuavcan/dsdl_compiler/pyuavcan/test/test_transport.py	/^    def test_unsigned_saturated_64bit(self):$/;"	kind:member	line:271
+test_zero	../libuavcan/dsdl_compiler/pyuavcan/test/dsdl/test_common.py	/^    def test_zero(self):$/;"	kind:member	line:20
+to_bytes	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def to_bytes(self):$/;"	kind:member	line:311
+to_frames	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def to_frames(self):$/;"	kind:member	line:541
+toggle	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def toggle(self):$/;"	kind:member	line:450
+transfer_key	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def transfer_key(self):$/;"	kind:member	line:443
+transport.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	1;"	kind:file	line:1
+type_limits.py	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/type_limits.py	1;"	kind:file	line:1
+type_output_filename	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def type_output_filename(t):$/;"	kind:function	line:74
+type_to_cpp_type	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def type_to_cpp_type(t):$/;"	kind:function	line:137
+unicode	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py	/^    unicode = str$/;"	kind:variable	line:198
+union_tag_len	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^def union_tag_len(x):$/;"	kind:function	line:50
+unpack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def unpack(self, stream):$/;"	kind:member	line:127
+unpack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def unpack(self, stream):$/;"	kind:member	line:139
+unpack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def unpack(self, stream):$/;"	kind:member	line:268
+unpack	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def unpack(self, stream):$/;"	kind:member	line:417
+url	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    url='http:\/\/uavcan.org',$/;"	kind:variable	line:12
+url	../libuavcan/dsdl_compiler/setup.py	/^    url='http:\/\/uavcan.org',$/;"	kind:variable	line:15
+validate_attribute_name	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def validate_attribute_name(name):$/;"	kind:function	line:669
+validate_compound_type_full_name	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def validate_compound_type_full_name(name):$/;"	kind:function	line:660
+validate_data_type_id	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def validate_data_type_id(t):$/;"	kind:function	line:673
+validate_namespace_name	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def validate_namespace_name(name):$/;"	kind:function	line:654
+validate_search_directories	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def validate_search_directories(dirnames):$/;"	kind:function	line:641
+validate_union	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^def validate_union(t):$/;"	kind:function	line:686
+validate_value_range	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def validate_value_range(self, value):$/;"	kind:member	line:94
+value	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def value(self):$/;"	kind:member	line:158
+value	../libuavcan/dsdl_compiler/pyuavcan/uavcan/transport.py	/^    def value(self, new_value):$/;"	kind:member	line:180
+version	../libuavcan/dsdl_compiler/pyuavcan/setup.py	/^    version='0.1',$/;"	kind:variable	line:7
+version	../libuavcan/dsdl_compiler/setup.py	/^    version='0.1',$/;"	kind:variable	line:7
+walk	../libuavcan/dsdl_compiler/pyuavcan/uavcan/dsdl/parser.py	/^    def walk():$/;"	kind:function	line:727
+write_generated_data	../libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/__init__.py	/^def write_generated_data(filename, data):$/;"	kind:function	line:113

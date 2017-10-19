@@ -80,6 +80,9 @@ target_link_libraries(test_file_server ${UAVCAN_LIB} rt ${CMAKE_THREAD_LIBS_INIT
 add_executable(test_multithreading apps/test_multithreading.cpp)
 target_link_libraries(test_multithreading ${UAVCAN_LIB} rt ${CMAKE_THREAD_LIBS_INIT})
 
+add_executable(test_node_comm apps/test_node_comm.cpp)
+target_link_libraries(test_node_comm ${UAVCAN_LIB} rt ${CMAKE_THREAD_LIBS_INIT})
+
 #
 # Tools
 #
